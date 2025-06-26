@@ -1,0 +1,909 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.4.555">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>quarto-inputf47f04b5</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="Ortsstruktur_files/libs/clipboard/clipboard.min.js"></script>
+<script src="Ortsstruktur_files/libs/quarto-html/quarto.js"></script>
+<script src="Ortsstruktur_files/libs/quarto-html/popper.min.js"></script>
+<script src="Ortsstruktur_files/libs/quarto-html/tippy.umd.min.js"></script>
+<script src="Ortsstruktur_files/libs/quarto-html/anchor.min.js"></script>
+<link href="Ortsstruktur_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="Ortsstruktur_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="Ortsstruktur_files/libs/bootstrap/bootstrap.min.js"></script>
+<link href="Ortsstruktur_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="Ortsstruktur_files/libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script src="Ortsstruktur_files/libs/quarto-contrib/intersection-observer-polyfill-1.0.0/intersection-observer.js"></script>
+<script src="Ortsstruktur_files/libs/quarto-contrib/scrollama-3.2.0/scrollama.min.js"></script>
+<script src="Ortsstruktur_files/libs/quarto-contrib/closeread-0.1.0/closeread.js"></script>
+<meta cr-debug-mode="false">
+<meta cr-remove-header-space="false">
+
+
+<link rel="stylesheet" href="_extensions/qmd-lab/closeread/closeread.css">
+<link rel="stylesheet" href="RV_styles.css">
+</head>
+
+<body>
+
+<div id="quarto-content" class="page-columns page-rows-contents page-layout-full toc-left">
+<div id="quarto-sidebar-toc-left" class="sidebar toc-left">
+  <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Innehåll</h2>
+   
+  <ul>
+  <li><a href="#inledning" id="toc-inledning" class="nav-link active" data-scroll-target="#inledning">Inledning</a></li>
+  <li><a href="#metod" id="toc-metod" class="nav-link" data-scroll-target="#metod">Metod</a></li>
+  <li><a href="#befolkningsförändring-i-tätorterna" id="toc-befolkningsförändring-i-tätorterna" class="nav-link" data-scroll-target="#befolkningsförändring-i-tätorterna">Befolkningsförändring i tätorterna</a></li>
+  <li><a href="#nattbefolkning-utveckling" id="toc-nattbefolkning-utveckling" class="nav-link" data-scroll-target="#nattbefolkning-utveckling">Nattbefolkning utveckling</a></li>
+  <li><a href="#dagbefolkning-utveckling" id="toc-dagbefolkning-utveckling" class="nav-link" data-scroll-target="#dagbefolkning-utveckling">Dagbefolkning utveckling</a></li>
+  <li><a href="#försörjningskvoten-i-tätorterna" id="toc-försörjningskvoten-i-tätorterna" class="nav-link" data-scroll-target="#försörjningskvoten-i-tätorterna">Försörjningskvoten i tätorterna</a></li>
+  <li><a href="#försörjningskvotens-förändring" id="toc-försörjningskvotens-förändring" class="nav-link" data-scroll-target="#försörjningskvotens-förändring">Försörjningskvotens förändring</a></li>
+  <li><a href="#inpendling-till-tätorter-i-västmanland" id="toc-inpendling-till-tätorter-i-västmanland" class="nav-link" data-scroll-target="#inpendling-till-tätorter-i-västmanland">Inpendling till tätorter i Västmanland</a></li>
+  <li><a href="#utpendling-från-tätorter-i-västmanland" id="toc-utpendling-från-tätorter-i-västmanland" class="nav-link" data-scroll-target="#utpendling-från-tätorter-i-västmanland">Utpendling från tätorter i Västmanland</a></li>
+  <li><a href="#tillgänglighetsindex" id="toc-tillgänglighetsindex" class="nav-link" data-scroll-target="#tillgänglighetsindex">Tillgänglighetsindex</a></li>
+  <li><a href="#referenser" id="toc-referenser" class="nav-link" data-scroll-target="#referenser">Referenser</a></li>
+  </ul>
+</nav>
+</div>
+<div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
+</div>
+<main class="content column-page-right" id="quarto-document-content">
+      <!-- user-provided yaml closeread style options -->
+      <style>
+        :root {
+          --cr-section-background-color: rgb(182 206 188);
+--cr-narrative-background-color-sidebar: white;
+        }
+      </style>
+    
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title"><div style="text-align:center;">
+<img src="RV_logo_primar_RGB.png" style="height:120px; margin-bottom: 1em;">
+<div style="font-weight: bold; font-size: 1.5em;">
+Ortstruktur
+</div>
+<div class="title-authors">
+<pre><code>Julia Wikgren, samhällsplanerare Samhällsutveckling
+Magnus Forslund, analytiker Regional utveckling
+Erik Johansson, utvecklingsstrateg Samhällsutveckling</code></pre>
+</div>
+</div></h1>
+</div>
+
+
+
+<div class="quarto-title-meta column-page-right">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="inledning" class="level2">
+<h2 class="anchored" data-anchor-id="inledning">Inledning</h2>
+<p>Västmanlands län har ett strategiskt och centralt läge i Sverige och består av tio centralorter, 34 tätorter, 62 småorter samt övrig landsbygd. Antalet orter har under åren utvecklats och kan förändras av faktorer som till exempel befolkningsförändringar eller ekonomisk tillväxt. Orterna ligger relativt utspridda inom länets kommuner och har olika storlek, funktioner och karaktär. Vissa orter domineras av olika samhällsfunktioner som arbetstillfällen och service medan andra karakteriseras som boendeorter. Utöver orternas storlek, funktioner och karaktär påverkar även det geografiska läget och nivån av utbytet mellan orterna i länet. Orterna binds samman genom transportinfrastruktur som i sin tur skapar förutsättningar till utbyte mellan orterna. Mellan vissa orter är utbytet mindre, vilket kan bero på orternas relativa storlek eller avstånd. Generellt har större orter fler funktioner än mindre orter där de mindre orterna och övrig landsbygd är beroende av dessa angående arbete och service. Alla orter har olika utmaningar och förutsättningar för att utvecklas och orternas beroende av varandra kan skiljas åt. Med denna anledning finns ett motiv till att få en gemensam bild av ortstrukturen i Västmanland (Region Västmanland 2025).</p>
+<p>Ortstrukturen handlar om förhållandet mellan orter och anges dels av storlek och vilka funktioner orterna har samt läget i relation till varandra men även utbytet mellam dem. I ortstrukturen delas orterna in i olika ortstyper baserat på deras funktioner och roller i den regionala geografin. Ortstrukturen är en kombination mellan befolkningens fördelning mellan orterna, geografiska läge och storlek. Orterna har delats in i åtta nivåer: Storregional nodstad, Centralort, Arbetsort, Serviceort, Bostadsort med viss service, Bostadsort, Småort och Utanför tätort.</p>
+<div class="cr-section cr-column-screen overlay-left">
+<div class="narrative-col">
+<div class="trigger new-trigger" data-focus-on="cr-karta">
+<div class="narrative">
+<p><strong>Ortstruktur</strong><br> Ur ett regionalt perspektiv finns det anledningar till att studera närmare hur tätorterna förhåller sig till varandra utifrån dess relativa storlek samt geografiska läge. Västmanlands ortstruktur visar större inslag på en polycentrisk struktur, vilket innebär att strukturen består av en dominerande ort. I den nordvästra delen av länet illustreras en mer monocentrisk- men flerkärnig struktur där det funktionella sambandet är beroende av centralorterna och dess utveckling (Adolphsson &amp; Johansson 2006). <br><br> Västerås är länets storregionala nodstad och kan klassificeras som en tillväxtmotor i länet som vidare utgör en viktig nod för arbetsorter och serviceorter. Centralorterna har en viktig roll i länet då de ofta fungerar som knutpunkter för kommunikation, olika servicefunktioner samt arbetsmarknad (Region Västmanland 2025). I länet finns fler bostadsorter än arbets- och serviceorter. Bostadsorterna utmärks av ett färre antal arbetstillfällen i förhållande till antalet boende. Arbetsorterna präglas av att ha en funktion som lokalt arbetsmarknadscentrum med en stor andel arbetstillfällen och inpendling. Serviceorterna har även en större andel arbetstillfällen och inpendling samt upprätthåller olika servicefunktioner. Bostadsorterna med viss service fungerar som en nod för service men som samtidigt karaktäriseras som en bostadsort. Kartan visar vidare småorterna i länet som ligger i anslutning till och utanför tätorterna.</p>
+</div>
+</div>
+</div>
+<div class="sticky-col">
+<div class="sticky-col-stack">
+<div id="cr-karta" class="sticky">
+<iframe src="https://region-vastmanland.github.io/kartor/Ortstruktur.html" width="225%" height="800">
+</iframe>
+</div>
+</div>
+</div>
+</div>
+<p><br></p>
+</section>
+<section id="metod" class="level2">
+<h2 class="anchored" data-anchor-id="metod">Metod</h2>
+<p>Genom att studera orternas roller och funktioner ges en större förståelse för dess funktionella samband och utvecklingsförutsättningar. <br> Orterna har delats in i de olika ortstyperna utifrån dataunderlag: total befolkning, dag/nattbefolkning, in- och utpendling, försörjningskvot samt servicegrad med mer. Därefter har underlaget för orterna analyserats och avgränsats för att sedan klassificera in orterna i ortstyperna. Statistiken är baserade på SCB:s statistikdata, Pipos regionalanalys och egna beräkningar. Nedan visas det underlag och avgränsningar som använts vid klassificeringen. <br></p>
+<ul>
+<li><p>Storregional nodstad: Centralort med stor andel natt- och dagbefolkning inklusive alla funktioner i högre grad (<em>service, utbildning, vård</em>)</p></li>
+<li><p>Centralort: Större tätort i kommunen</p></li>
+<li><p>Arbetsort: Tätorter som har under 50% utpendlare över tätort</p></li>
+</ul>
+<p>-Dagbefolkningen är stor i relation till nattbefolkningen (lägre värde än 3 i natt/dagbefolkning) <br> (<em>ju lägre värde på natt/dagbefolkning desto fler invånare är förvärvsarbetande med arbete i orten</em>)</p>
+<p>-Över 400 i dagbefolkning. <br></p>
+<ul>
+<li>Serviceort: Tätorter som har under 50% utpendlare över tätort</li>
+</ul>
+<p>-Dagbefolkningen är stor i relation till nattbefolkningen men mindre än arbetsort (lägre värde än 5 i natt/dagbefolkning)</p>
+<p>-Över 1000 i folkmängd.<br></p>
+<p>-Undantag: (<em>känd information om att viss service finns och uppfyller nästintintill alla krav för serviceort</em>)</p>
+<ul>
+<li>Bostadsort med viss service: Bostadsort med servicegrad 3–4:</li>
+</ul>
+<p>-Servicegrad 1: paketombud</p>
+<p>-Servicegrad 2: paketombud + dagligvarubutik (obemannad eller begränsat utbud)</p>
+<p>-Servicegrad 3: dagligvarubutik (bemannad fullt utbud)</p>
+<p>-Servicegrad 4: paketombud + dagligvarubutik (bemannad fullt utbud)</p>
+<ul>
+<li>Bostadsort:</li>
+</ul>
+<p>-Tätorter Över 50% utpendlare över tätort</p>
+<p>-Tätorter som har under 50% utpendlare över tätort och stor andel nattbefolkning i relation till dagbefolkning (högre värde än 10 i natt/dagbefolkning). <br> (<em>ju högre värde på natt/dagbefolkning desto fler invånare är förvärvsarbetande med bostad i orten</em>). <br></p>
+<p>-Tätorter som har under 50% utpendlare över tätort och högre värde än 10 i natt/dagbefolkning men som har under 1000 i folkmängd. <br></p>
+<p>(<em>Tätorter utan några specifika funktioner, men kan inneha någon typ av service, exemplevis paketombud eller obemannad butik</em>) <br></p>
+<ul>
+<li><p>Småort: Ort med &lt;50-200 invånare</p></li>
+<li><p>Utanför tätort: Övrig landsbygd</p></li>
+</ul>
+<p><br></p>
+<section id="ortstrukturens-utveckling" class="level4">
+<h4 class="anchored" data-anchor-id="ortstrukturens-utveckling"><strong>Ortstrukturens utveckling</strong></h4>
+<p>Från år 2013 till 2023 har orterna utvecklats i länet, vilket medfört en förändring av antalet orter. <br> Vissa nya tätorter har tillkommit sedan år 2013, medan andra tidigare tätorter inte längre defineras som tätort under senare tid. Ortstrukturens utveckling kan gå i riktning mot ett mer sammanhängande län eller mindre sammanhängande, vilket har en koppling till orternas betydelse och roll i den regionala geografin.</p>
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true" href="">Antal orter per ortstyp</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false" href="">Folkmängd per ortstyp</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-3" role="tab" aria-controls="tabset-1-3" aria-selected="false" href="">Källa</a></li></ul>
+<div class="tab-content">
+<div id="tabset-1-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-1-1-tab">
+<div class="cell">
+<div class="cell-output-display">
+<table class="caption-top table table-sm table-striped small" data-quarto-postprocess="true">
+<thead>
+<tr class="header">
+<th style="text-align: left;" data-quarto-table-cell-role="th">Ortsklass</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">2013</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">2023</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Storregional nodstad</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">1</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Centralort</td>
+<td style="text-align: right;">9</td>
+<td style="text-align: right;">9</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Arbetsort</td>
+<td style="text-align: right;">6</td>
+<td style="text-align: right;">5</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Serviceort</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">6</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Bostadsort med viss service</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">5</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Bostadsort</td>
+<td style="text-align: right;">20</td>
+<td style="text-align: right;">18</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Småort</td>
+<td style="text-align: right;">45</td>
+<td style="text-align: right;">65</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Utanför tätort</td>
+<td style="text-align: right;">10</td>
+<td style="text-align: right;">10</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Totalsumma</td>
+<td style="text-align: right;">95</td>
+<td style="text-align: right;">119</td>
+</tr>
+</tbody>
+</table>
+
+
+</div>
+</div>
+</div>
+<div id="tabset-1-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-2-tab">
+<div class="cell">
+<div class="cell-output-display">
+<table class="caption-top table table-sm table-striped small" data-quarto-postprocess="true">
+<thead>
+<tr class="header">
+<th style="text-align: left;" data-quarto-table-cell-role="th">Ortsklass</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">2013</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">2023</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Storregional nodstad</td>
+<td style="text-align: right;">44.4</td>
+<td style="text-align: right;">46.6</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Centralort</td>
+<td style="text-align: right;">31.7</td>
+<td style="text-align: right;">29.9</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Arbetsort</td>
+<td style="text-align: right;">5.2</td>
+<td style="text-align: right;">3.8</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Serviceort</td>
+<td style="text-align: right;">2.3</td>
+<td style="text-align: right;">3.2</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Bostadsort med viss service</td>
+<td style="text-align: right;">0.0</td>
+<td style="text-align: right;">0.6</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Bostadsort</td>
+<td style="text-align: right;">4.2</td>
+<td style="text-align: right;">3.6</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Utanför tätort</td>
+<td style="text-align: right;">12.2</td>
+<td style="text-align: right;">12.4</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Totalsumma</td>
+<td style="text-align: right;">100.0</td>
+<td style="text-align: right;">100.0</td>
+</tr>
+</tbody>
+</table>
+
+
+</div>
+</div>
+<p>Kommentar: Tillgänglighetsindex finns inte att tillgå för år 2013, därför är det 0 i den klassen.</p>
+</div>
+<div id="tabset-1-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-3-tab">
+<p>Uppgifterna är hämtade från Statistiska centralbyråns Regiondatabas för Västmanland och därefter klassificerade efter den tidigare beskrivna metoden. Eftersom tillgänglighetsindex från Tillväxtverket inte finns för år 2013 har vi inte kunnat sätta motsvarande klassning för “Bostadsort med viss service”. Vi har dock valt att redovisa den för år 2023. Allt annat oförändrat skulle de aktuella orterna alltså vara klassade som Bostadsort år 2013.</p>
+<p>Källa: SCB</p>
+</div>
+</div>
+</div>
+<p><br> Några av de tidigare småorterna har under senare tid utvecklats till bostadsorter bland annat på grund av befolkningsökning. <br> Vissa bostadsorter har med tiden utvecklats till service- eller arbetsort eller gått från serviceort till arbetsort eller tvärtom. <br> Till följd av orternas utveckling har den regionala geografin delvis förändrats då en del orter även minskat i befolkning, vilket kan göra att orten inte längre defineras som tätort. Vid beräkningen av tätorter kan därmed tätorterna avregistreras medan nya kommer till. De nya tätorterna registreras när befokningen i en ort passerar 200 invånare. Anledningen till att vissa kommuner har ett fåtal tätorter kan till exempel bero på att flera tätorter tidigare vuxit ihop till en enda. Småorter som har för få invånare kan även växa ihop på samma sätt till en tätort och därmed registreras som tätort. Västmanland har en hög tätortsgrad, 88 %, vilket är samma grad som för riket i helhet. Detta innebär vidare att 12 % av befolkningen i länet bor utanför tätort. Tätortsgraden anser andelen befolkning i tätorterna i förhållande till den totala befolkningen i länet (SCB 2024).</p>
+<p><br></p>
+</section>
+</section>
+<section id="befolkningsförändring-i-tätorterna" class="level2">
+<h2 class="anchored" data-anchor-id="befolkningsförändring-i-tätorterna">Befolkningsförändring i tätorterna</h2>
+<div class="cr-section cr-column-screen overlay-left">
+<div class="narrative-col">
+<div class="trigger new-trigger" data-focus-on="cr-karta2">
+<div class="narrative">
+<p><strong>Befolkningsförändring</strong><br> För att visa på tätorternas utveckling i förhållande till de olika ortstyperna har det totala antalet invånare under ett tio årsintervall studerats. I de allra flesta orterna visas en positiv befolkningsutveckling mellan åren 2013–2023. Befolkningstillväxten har varit högre i de östra, särskilt sydöstra delarna av länet i jämförelse med de västra delarna. På ortsnivå framträder en tydlig bild av befolkningsökningen inom de redan mest befolkningstäta södra delarna av länet. De orter som haft en ökad befolkning ligger även mestadels i närheten av den storregionala nodstaden och centralorten Hallstahammar.<br> <br> Befolkningsförändringen i många orter visar sig även vara relativt oförändrad, främst i de sydvästra delarna av länet. De orter som har en negativ befolkningsutveckling befinns i de nordvästra samt centrala delarna av länet, där orterna i allmänhet är färre. Gränserna mellan nivåerna för befolkningsförändringen går från cirka -25 till -3,5 % (<em>minskat</em>), -2,5 till 2,8 % (<em>oförändrat</em>) och 5 till 100 % (<em>ökat</em>). De orter som har en utveckling på 100 % är nya orter som tillkommit under senare tid.</p>
+</div>
+</div>
+</div>
+<div class="sticky-col">
+<div class="sticky-col-stack">
+<div id="cr-karta2" class="sticky">
+<iframe src="https://region-vastmanland.github.io/kartor/Ortstruktur%20Befolkningsf%C3%B6r%C3%A4ndring.html" width="225%" height="800">
+</iframe>
+</div>
+</div>
+</div>
+</div>
+<p><br></p>
+<p>I Västmanland bor cirka 280 000 invånare och 88 % är bosatta i någon av tätorterna i länet. Länet har en av de högsta tätortsgraderna i Sverige, efter Stockholm och Skåne men är till ytan ett litet län. I den storregionala nodstaden Västerås bor cirka 130 000 invånare, vilket motsvarar nästan hälften av länets totala befolkning. Därefter har centralorterna Köping, cirka 18 500 invånare samt Sala, cirka 13 700 invånare. I de 44 tätorterna har befolkningen från år 2013 till 2023 ökat med cirka 21 700 invånare. Befolkningen i länet har mestadels ökat i bostads- och serviceorter som ligger i närheten av den storregionala nodstaden eller centralorterna Hallstahammar och Sala. Länets tätorter som har minskat i befolkning är främst bostads- och serviceorter, men som antingen ligger längre ifrån den storregionala nodstaden, centralorter eller i utkanten av kommunernas gränser. I Sverige har det skett en kraftig befolkningstillväxt i många delar av landet och ur ett internationellt perspektiv har urbaniseringen varit stark. Detta har inneburit en befolkningsutveckling i framför allt tätorter. Vid sidan av urbaniseringen minskar befolkningen i andra delar av landet såväl som inom länet, såsom i mindre bostadsorter, småorter samt övrig landsbygd (Bostadsplaneringskommittén SOU 2015:59). <br> <br></p>
+<p>Som tidigare nämnt har de flesta orter i länet haft en positiv befolkningsutveckling. Totalt är det 19 orter som haft en positiv befolkningsutveckling i Västmanland, medan 10 orter haft en negativ befolkningsutveckling. Från år 2000 till 2023 har befolkningen i tätorterna totalt ökat med 16 %. Småorterna har den största procentuella befolkningsökningen mellan åren 2000 och 2023, totalt 60%. I storregionala nodstaden, centralorterna och i de allra flesta arbetsorter är befolkningen som störst. Sett till antal personer har tillväxten från år 2013 till 2023 varit som störst i storregionala nodstaden och sedan serviceorter samt centralorter. I arbets- och bostadsorterna har befolkningen totalt sett minskat.</p>
+<p><br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br></p>
+</section>
+<section id="nattbefolkning-utveckling" class="level2">
+<h2 class="anchored" data-anchor-id="nattbefolkning-utveckling">Nattbefolkning utveckling</h2>
+<div class="cr-section cr-column-screen overlay-left">
+<div class="narrative-col">
+<div class="trigger new-trigger" data-focus-on="cr-karta3">
+<div class="narrative">
+<p>text</p>
+</div>
+</div>
+</div>
+<div class="sticky-col">
+<div class="sticky-col-stack">
+<div id="cr-karta3" class="sticky">
+<iframe src="https://region-vastmanland.github.io/kartor/Ortstruktur_Nattbefolkning.html" width="225%" height="800">
+</iframe>
+</div>
+</div>
+</div>
+</div>
+<p><br></p>
+<p><br></p>
+</section>
+<section id="dagbefolkning-utveckling" class="level2">
+<h2 class="anchored" data-anchor-id="dagbefolkning-utveckling">Dagbefolkning utveckling</h2>
+<div class="cr-section cr-column-screen overlay-left">
+<div class="narrative-col">
+<div class="trigger new-trigger" data-focus-on="cr-karta4">
+<div class="narrative">
+<p>text</p>
+</div>
+</div>
+</div>
+<div class="sticky-col">
+<div class="sticky-col-stack">
+<div id="cr-karta4" class="sticky">
+<iframe src="https://region-vastmanland.github.io/kartor/Ortstruktur_Dagbefolkning.html" width="225%" height="800">
+</iframe>
+</div>
+</div>
+</div>
+</div>
+<p><br></p>
+<p><br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br></p>
+</section>
+<section id="försörjningskvoten-i-tätorterna" class="level2">
+<h2 class="anchored" data-anchor-id="försörjningskvoten-i-tätorterna">Försörjningskvoten i tätorterna</h2>
+<div class="cr-section cr-column-screen overlay-left">
+<div class="narrative-col">
+<div class="trigger new-trigger" data-focus-on="cr-karta5">
+<div class="narrative">
+<p>text</p>
+</div>
+</div>
+</div>
+<div class="sticky-col">
+<div class="sticky-col-stack">
+<div id="cr-karta5" class="sticky">
+<iframe src="https://region-vastmanland.github.io/kartor/Ortstruktur_Forsorjningskvot23.html" width="225%" height="800">
+</iframe>
+</div>
+</div>
+</div>
+</div>
+<p><br></p>
+<p><br></p>
+</section>
+<section id="försörjningskvotens-förändring" class="level2">
+<h2 class="anchored" data-anchor-id="försörjningskvotens-förändring">Försörjningskvotens förändring</h2>
+<div class="cr-section cr-column-screen overlay-left">
+<div class="narrative-col">
+<div class="trigger new-trigger" data-focus-on="cr-karta6">
+<div class="narrative">
+<p>text</p>
+</div>
+</div>
+</div>
+<div class="sticky-col">
+<div class="sticky-col-stack">
+<div id="cr-karta6" class="sticky">
+<iframe src="https://region-vastmanland.github.io/kartor/Ortstruktur_Forsorjningskvotforandring.html" width="225%" height="800">
+</iframe>
+</div>
+</div>
+</div>
+</div>
+<p><br></p>
+<p><br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br></p>
+</section>
+<section id="inpendling-till-tätorter-i-västmanland" class="level2">
+<h2 class="anchored" data-anchor-id="inpendling-till-tätorter-i-västmanland">Inpendling till tätorter i Västmanland</h2>
+<div class="cr-section cr-column-screen overlay-left">
+<div class="narrative-col">
+<div class="trigger new-trigger" data-focus-on="cr-karta7">
+<div class="narrative">
+<p>text</p>
+</div>
+</div>
+</div>
+<div class="sticky-col">
+<div class="sticky-col-stack">
+<div id="cr-karta7" class="sticky">
+<iframe src="https://region-vastmanland.github.io/kartor/Inpendling.html" width="250%" height="800">
+</iframe>
+</div>
+</div>
+</div>
+</div>
+<p><br></p>
+<p><br></p>
+</section>
+<section id="utpendling-från-tätorter-i-västmanland" class="level2">
+<h2 class="anchored" data-anchor-id="utpendling-från-tätorter-i-västmanland">Utpendling från tätorter i Västmanland</h2>
+<div class="cr-section cr-column-screen overlay-left">
+<div class="narrative-col">
+<div class="trigger new-trigger" data-focus-on="cr-karta8">
+<div class="narrative">
+<p>text</p>
+</div>
+</div>
+</div>
+<div class="sticky-col">
+<div class="sticky-col-stack">
+<div id="cr-karta8" class="sticky">
+<iframe src="https://region-vastmanland.github.io/kartor/Utpendling.html" width="250%" height="800">
+</iframe>
+</div>
+</div>
+</div>
+</div>
+<p><br></p>
+<p><br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br></p>
+</section>
+<section id="tillgänglighetsindex" class="level2">
+<h2 class="anchored" data-anchor-id="tillgänglighetsindex">Tillgänglighetsindex</h2>
+<div class="cr-section cr-column-screen overlay-left">
+<div class="narrative-col">
+<div class="trigger new-trigger" data-focus-on="cr-karta9">
+<div class="narrative">
+<p>text</p>
+</div>
+</div>
+</div>
+<div class="sticky-col">
+<div class="sticky-col-stack">
+<div id="cr-karta9" class="sticky">
+<iframe src="https://region-vastmanland.github.io/kartor/Tillganglighetsindex.html" width="225%" height="800">
+</iframe>
+</div>
+</div>
+</div>
+</div>
+<p><br></p>
+<p><br> <br></p>
+</section>
+<section id="referenser" class="level2">
+<h2 class="anchored" data-anchor-id="referenser">Referenser</h2>
+<p><br> SCB (2024). <em>Tätorter i Sverige</em>. https://www.scb.se/hitta-statistik/sverige-i-siffror/miljo/tatorter-i-sverige/ <br> <br> Region Västmanland (2025). <em>Regional systemanalys för Västmanland</em>. https://regionvastmanland.se/utveckling/samhallsutveckling/transportinfrastruktur/webbrapport-systemanalys/<br>
+<br> Adolphson, M &amp; Johansson, M. (2006). <em>Polycentrism, Monocentrism och Regionförstoring, alternativa och/eller komplementära utvecklingsförlopp</em>. Stockholm: KTH.</p>
+<p><br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br></p>
+</section>
+
+</main>
+<!-- /main column -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>
