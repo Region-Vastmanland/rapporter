@@ -1,0 +1,102 @@
+/* Typsnitt */
+body {
+  font-family: Calibri, 'Carlito', Arial, sans-serif !important;
+  color: #333333;
+  font-size: 18px;
+  line-height: 1.5;
+  background-color: white;
+}
+
+/* Rubriker */
+h1, h2, h3 {
+  color: #670F3B;
+  font-weight: 700;
+  margin-top: 1.2em;
+  margin-bottom: 0.6em;
+}
+
+/* Länkar */
+a {
+  color: #007acc;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+/* Tabeller - minimalistisk stil */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1em 0;
+}
+
+table th {
+  font-weight: bold;
+  background-color: #c0e7ed;
+  padding: 8px 12px;
+  text-align: left;
+  border: none;
+}
+
+table td {
+  padding: 8px 12px;
+  border: none;
+}
+
+table tr:nth-child(even) td {
+  background-color: #ffffff;
+}
+
+table tr:nth-child(odd) td {
+  background-color: #ffffff;
+}
+
+
+clean-table tr:nth-child(even) {
+  background-color: white !important;
+}
+
+quarto-title-author {
+  text-align: center;
+}
+
+/* Marginaler */
+p {
+  margin-bottom: 1em;
+}
+
+
+.title-authors code {
+   font-family: Calibri, 'Carlito', Arial, sans-serif !important;
+  color: #666 !important;
+  font-weight: normal !important;
+  font-style: normal !important;
+  font-size: 16px !important;
+  margin-top: 0.5em;
+  text-align: center;
+}
+
+.kommentar {
+  font-size: 0.85em;
+  color: #555;
+  margin-top: 0.5em;
+  font-style: italic;
+}
+
+.panel-tabset table {
+  width: 400px !important;
+  background-color: white;
+  margin-left: 0;
+}
+
+.panel-tabset .nav-tabs .nav-link {
+  color: #333333;            /* Färg på flikrubriken (inte vald) */
+}
+
+.panel-tabset .nav-tabs .nav-link.active {
+  color: #670F3B;            /* Färg på aktiv flik */
+  background-color: #ffffff; /* Bakgrundsfärg på aktiv flik */
+  font-weight: bold; /* Gör aktiv flik fet */
+}
+
