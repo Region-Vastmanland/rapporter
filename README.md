@@ -7,3 +7,4 @@ Här samlas Region Västmanlands webbrapporter för olika teman.
 Rapport RV001 (2025) Författare: Julia Wikgren
 
 [Ortstruktur](https://region-vastmanland.github.io/rapporter/Ortsstruktur.html) 
+Ortstruktur (2025) Författare: Julia Wikgren, Erik Johansson & Magnus Forslund 
