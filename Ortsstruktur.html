@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>quarto-input3c427cde</title>
+<title>quarto-input27c07fd1</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -46,29 +46,10 @@ ul.task-list li input[type="checkbox"] {
 
 <body>
 
-<div id="quarto-content" class="page-columns page-rows-contents page-layout-full toc-left">
-<div id="quarto-sidebar-toc-left" class="sidebar toc-left">
-  <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">Innehåll</h2>
-   
-  <ul>
-  <li><a href="#inledning" id="toc-inledning" class="nav-link active" data-scroll-target="#inledning">Inledning</a></li>
-  <li><a href="#metod" id="toc-metod" class="nav-link" data-scroll-target="#metod">Metod</a></li>
-  <li><a href="#befolkningsförändring-i-tätorterna" id="toc-befolkningsförändring-i-tätorterna" class="nav-link" data-scroll-target="#befolkningsförändring-i-tätorterna">Befolkningsförändring i tätorterna</a></li>
-  <li><a href="#nattbefolkning-utveckling" id="toc-nattbefolkning-utveckling" class="nav-link" data-scroll-target="#nattbefolkning-utveckling">Nattbefolkning utveckling</a></li>
-  <li><a href="#dagbefolkning-utveckling" id="toc-dagbefolkning-utveckling" class="nav-link" data-scroll-target="#dagbefolkning-utveckling">Dagbefolkning utveckling</a></li>
-  <li><a href="#försörjningskvoten-i-tätorterna" id="toc-försörjningskvoten-i-tätorterna" class="nav-link" data-scroll-target="#försörjningskvoten-i-tätorterna">Försörjningskvoten i tätorterna</a></li>
-  <li><a href="#försörjningskvotens-förändring" id="toc-försörjningskvotens-förändring" class="nav-link" data-scroll-target="#försörjningskvotens-förändring">Försörjningskvotens förändring</a></li>
-  <li><a href="#inpendling-till-tätorter-i-västmanland" id="toc-inpendling-till-tätorter-i-västmanland" class="nav-link" data-scroll-target="#inpendling-till-tätorter-i-västmanland">Inpendling till tätorter i Västmanland</a></li>
-  <li><a href="#utpendling-från-tätorter-i-västmanland" id="toc-utpendling-från-tätorter-i-västmanland" class="nav-link" data-scroll-target="#utpendling-från-tätorter-i-västmanland">Utpendling från tätorter i Västmanland</a></li>
-  <li><a href="#tillgänglighetsindex" id="toc-tillgänglighetsindex" class="nav-link" data-scroll-target="#tillgänglighetsindex">Tillgänglighetsindex</a></li>
-  <li><a href="#referenser" id="toc-referenser" class="nav-link" data-scroll-target="#referenser">Referenser</a></li>
-  </ul>
-</nav>
+<div id="quarto-content" class="page-columns page-rows-contents page-layout-full">
+<div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
 </div>
-<div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-</div>
-<main class="content column-page-right" id="quarto-document-content">
+<main class="content page-columns page-full column-page-left" id="quarto-document-content">
       <!-- user-provided yaml closeread style options -->
       <style>
         :root {
@@ -80,7 +61,10 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title"><div style="text-align:center;">
+<h1 class="title"><div style="height: 140px;">
+
+</div>
+<div style="text-align:center;">
 <img src="RV_logo_primar_RGB.png" style="height:120px; margin-bottom: 1em;">
 <div style="font-weight: bold; font-size: 1.5em;">
 Ortstruktur
@@ -95,7 +79,7 @@ Erik Johansson, utvecklingsstrateg Samhällsutveckling</code></pre>
 
 
 
-<div class="quarto-title-meta column-page-right">
+<div class="quarto-title-meta column-page-left">
 
     
   
@@ -107,15 +91,60 @@ Erik Johansson, utvecklingsstrateg Samhällsutveckling</code></pre>
 </header>
 
 
+<div class="{=html}">
+<style>
+/* --- Navbar --- */
+.navbar {
+  position: fixed; top: 0; left: 0; width: 100vw;
+  background: #670F3B; border-bottom: 1px solid #ccc;
+  display: flex; justify-content: center; gap: 8rem;
+  padding: 0.5rem 1rem; box-sizing: border-box;
+  font-family: Calibri, 'Carlito', Arial, sans-serif;
+  z-index: 2000;
+}
+.navbar a {
+  text-decoration: none; color: #fff; font-weight: 500;
+  white-space: nowrap; padding: 0 1.5rem;
+  border-right: 1px solid rgba(255,255,255,0.4);
+  transition: color 0.3s;
+}
+.navbar a:last-child { border-right: none; }
+.navbar a:hover, .navbar a.active { color: #F5AA3C; font-weight: bold; }
+
+/* --- Innehåll under navbar --- */
+.closeread-body { padding-top: 180px; }
+.closeread-body h2 { scroll-margin-top: 3.5rem; }
+
+/* --- Leaflet popups/tooltips ovanpå allt --- */
+.leaflet-container .leaflet-popup-pane,
+.leaflet-container .leaflet-tooltip-pane { z-index: 5000 !important; }
+
+/* --- Quarto sidebars under navbar, klick-genomsläppliga --- */
+#quarto-sidebar, .quarto-sidebar,
+#quarto-margin-sidebar, .quarto-margin-sidebar,
+.sidebar, .sidebar-menu-container {
+  top: 180px !important; z-index: 1000 !important; pointer-events: none;
+}
+#quarto-sidebar a, .quarto-sidebar a,
+#quarto-margin-sidebar a, .quarto-margin-sidebar a { pointer-events: auto; }
+
+}
+</style>
+<div class="navbar">
+<p><a href="#inledning">Inledning</a> <a href="#metod">Metod</a> <a href="#befolkningsforandring">Befolkningsförändringar</a> <a href="#flyttning">Flyttningar</a> <a href="#sysselsatta">Sysselsättning</a> <a href="#forsorjningskvot">Försörjningskvot</a> <a href="#pendling">Pendling</a> <a href="#tillganglighet">Tillgänglighet och typologi</a> <a href="#slutsats">Sammanfattning</a> <a href="#Vagen">Vägen framåt</a></p>
+</div>
+</div>
+<div class="{closeread-narrative} page-columns page-full">
 <section id="inledning" class="level2">
 <h2 class="anchored" data-anchor-id="inledning">Inledning</h2>
-<p>Västmanlands län har ett strategiskt och centralt läge i Sverige och består av tio centralorter, 34 tätorter, 62 småorter samt övrig landsbygd. Antalet orter har under åren utvecklats och kan förändras av faktorer som till exempel befolkningsförändringar eller ekonomisk tillväxt. Orterna ligger relativt utspridda inom länets kommuner och har olika storlek, funktioner och karaktär. Vissa orter domineras av olika samhällsfunktioner som arbetstillfällen och service medan andra karakteriseras som boendeorter. Utöver orternas storlek, funktioner och karaktär påverkar även det geografiska läget och nivån av utbytet mellan orterna i länet. Orterna binds samman genom transportinfrastruktur som i sin tur skapar förutsättningar till utbyte mellan orterna. Mellan vissa orter är utbytet mindre, vilket kan bero på orternas relativa storlek eller avstånd. Generellt har större orter fler funktioner än mindre orter där de mindre orterna och övrig landsbygd är beroende av dessa angående arbete och service. Alla orter har olika utmaningar och förutsättningar för att utvecklas och orternas beroende av varandra kan skiljas åt. Med denna anledning finns ett motiv till att få en gemensam bild av ortstrukturen i Västmanland (Region Västmanland 2025).</p>
-<p>Ortstrukturen handlar om förhållandet mellan orter och anges dels av storlek och vilka funktioner orterna har samt läget i relation till varandra men även utbytet mellam dem. I ortstrukturen delas orterna in i olika ortstyper baserat på deras funktioner och roller i den regionala geografin. Ortstrukturen är en kombination mellan befolkningens fördelning mellan orterna, geografiska läge och storlek. Orterna har delats in i åtta nivåer: Storregional nodstad, Centralort, Arbetsort, Serviceort, Bostadsort med viss service, Bostadsort, Småort och Utanför tätort.</p>
+<p>Västmanlands län har ett strategiskt och centralt läge i Sverige och består av tio centralorter, 34 tätorter, 62 småorter samt övrig landsbygd. Antalet orter har under åren utvecklats och kan förändras av faktorer som till exempel befolkningsförändringar eller ekonomisk tillväxt. Orterna ligger relativt utspridda inom länets kommuner och har olika storlek, funktioner och karaktär. Vissa orter domineras av olika samhällsfunktioner som arbetstillfällen och service medan andra karakteriseras som boendeorter. Utöver orternas storlek, funktioner och karaktär påverkar även det geografiska läget och nivån av utbytet mellan orterna i länet. Orterna binds samman genom transportinfrastruktur som i sin tur skapar förutsättningar till utbyte mellan orterna. Mellan vissa orter är utbytet mindre, vilket kan bero på orternas relativa storlek eller avstånd. Generellt har större orter fler funktioner än mindre orter där de mindre orterna och övrig landsbygd är beroende av dessa angående arbete och service. Alla orter har olika utmaningar och förutsättningar för att utvecklas och orternas beroende av varandra kan skiljas åt. Med denna anledning finns ett motiv till att få en gemensam bild av ortstrukturen i Västmanland.</p>
+<p>Ortstrukturen handlar om förhållandet mellan orter och anges dels av storlek och vilka funktioner orterna har och dels av läget i relation till varandra samt utbytet mellan dem. I ortstrukturen delas orterna in i olika ortstyper baserat på deras funktioner och roller i den regionala geografin. Orterna har delats in i åtta nivåer: Storregional nodstad, Centralort, Arbetsort, Serviceort, Bostadsort med viss service, Bostadsort, Småort och Utanför tätort.</p>
+<p>Det finns olika typer av ortsstrukturer i landet, där de två mest förekommande strukturerna är enkärninga (monocentrisk) respektive flerkärniga (polycentrisk). Strukturerna kan ses som två kategoriseringar som beskriver den dominerande karaktären i en funktionell geografi. Detta innebär däremot inte att en region är antingen fullt ut enkärnig eller flerkärning, utan graden av flerkärnighet baseras även på vilken geografisk nivå och vilket perspektiv som illustreras.</p>
 <div class="cr-section cr-column-screen overlay-left">
 <div class="narrative-col">
 <div class="trigger new-trigger" data-focus-on="cr-karta">
 <div class="narrative">
-<p><strong>Ortstruktur</strong><br> Ur ett regionalt perspektiv finns det anledningar till att studera närmare hur tätorterna förhåller sig till varandra utifrån dess relativa storlek samt geografiska läge. Västmanlands ortstruktur visar större inslag på en polycentrisk struktur, vilket innebär att strukturen består av en dominerande ort. I den nordvästra delen av länet illustreras en mer monocentrisk- men flerkärnig struktur där det funktionella sambandet är beroende av centralorterna och dess utveckling (Adolphsson &amp; Johansson 2006). <br><br> Västerås är länets storregionala nodstad och kan klassificeras som en tillväxtmotor i länet som vidare utgör en viktig nod för arbetsorter och serviceorter. Centralorterna har en viktig roll i länet då de ofta fungerar som knutpunkter för kommunikation, olika servicefunktioner samt arbetsmarknad (Region Västmanland 2025). I länet finns fler bostadsorter än arbets- och serviceorter. Bostadsorterna utmärks av ett färre antal arbetstillfällen i förhållande till antalet boende. Arbetsorterna präglas av att ha en funktion som lokalt arbetsmarknadscentrum med en stor andel arbetstillfällen och inpendling. Serviceorterna har även en större andel arbetstillfällen och inpendling samt upprätthåller olika servicefunktioner. Bostadsorterna med viss service fungerar som en nod för service men som samtidigt karaktäriseras som en bostadsort. Kartan visar vidare småorterna i länet som ligger i anslutning till och utanför tätorterna.</p>
+<p><strong>Ortstruktur</strong><br> Ur ett regionalt perspektiv finns det anledningar till att studera närmare hur tätorterna förhåller sig till varandra utifrån deras relativa storlek samt geografiska läge. Västmanlands ortstruktur visar större inslag på en monocentrisk struktur, vilket innebär att strukturen främst består av en dominerande ort. I den nordvästra delen av länet illustreras en mer polycentrisk och flerkärnig struktur där det funktionella sambandet är beroende av centralorterna och dess utveckling. <br><br> Västerås är länets storregionala nodstad och kan klassificeras som en tillväxtmotor i länet som utgör en viktig nod för såväl arbetsorter och serviceorter som alla övriga ortstyper. Centralorterna har också en viktig roll i länet då de ofta fungerar som knutpunkter för kommunikation och transporter, olika servicefunktioner samt arbetsmarknad. I länet finns fler bostadsorter än arbets- och serviceorter. Bostadsorterna utmärks av ett färre antal arbetstillfällen i förhållande till antalet boende. Arbetsorterna präglas av att ha en funktion som lokalt arbetsmarknadscentrum med en stor andel arbetstillfällen och inpendling. Serviceorterna har även en större andel arbetstillfällen och inpendling samt upprätthåller olika servicefunktioner. Bostadsorterna med viss service fungerar som en nod för viss grundläggande service men i mindre omfattning än serviceorterna. Kartan visar även småorterna i länet som ligger i anslutning till och utanför tätorterna. Småorterna kan ses som bostadsorter men utifrån deras befolkningsstorlek (50-199 personer per definition) har vi valt att låta dem ingå i begreppet “utanför tätort” i statistiken.</p>
 </div>
 </div>
 </div>
@@ -130,44 +159,61 @@ Erik Johansson, utvecklingsstrateg Samhällsutveckling</code></pre>
 </div>
 <p><br></p>
 </section>
-<section id="metod" class="level2">
+<section id="metod" class="level2 page-columns page-full">
 <h2 class="anchored" data-anchor-id="metod">Metod</h2>
-<p>Genom att studera orternas roller och funktioner ges en större förståelse för dess funktionella samband och utvecklingsförutsättningar. <br> Orterna har delats in i de olika ortstyperna utifrån dataunderlag: total befolkning, dag/nattbefolkning, in- och utpendling, försörjningskvot samt servicegrad med mer. Därefter har underlaget för orterna analyserats och avgränsats för att sedan klassificera in orterna i ortstyperna. Statistiken är baserade på SCB:s statistikdata, Pipos regionalanalys och egna beräkningar. Nedan visas det underlag och avgränsningar som använts vid klassificeringen. <br></p>
+<p>Genom att studera orternas roller och funktioner ges en större förståelse för funktionella samband och utvecklingsförutsättningar i Västmanland. Orterna har delats in i de olika ortstyperna utifrån ett dataunderlag bestående av: folkmängd, dag- och nattbefolkning, relationen mellan dag- och nattbefolkning, in- och utpendling samt servicegrad. Därefter har underlaget för orterna analyserats och avgränsats för att sedan klassificera in orterna i ortstyperna. Övrigt dataunderlag som har ingått i olika delar av analysen för klassificeringen är: försörjningskvot, försörjningskvotens förändring, in- och utflyttning, andelen som bor och arbetar i samma ort och andelen småhus. Statistiken är baserade på SCB:s Regiondatabas för Västmanland, Pipos regionalanalys och egna beräkningar.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>Dagbefolkning = sysselsatta med arbetsplats i området. <br> Nattbefolkning = sysselsatta med bostad i området.</p>
+</div></div><p>I analysen har vi även tagit del av samtliga kommuners gällande översiktsplaner med fokus på vilka orter som lyfts fram, hur de benämns och hanteras i planeringen kopplat till funktion och olika ämnesområden. Hänsyn har även tagits till planernas aktualitet, som skiljer sig mellan ganska många år - det sträcker sig från 2007 till 2023. I vår hantering har detta underlag hjälpt oss att kvalitetsgranska den gjorda klassificeringen och bistått vid eventuella gränsdragningsproblem. Nedan visas det underlag och avgränsningar som använts vid klassificeringen.</p>
+<p><br></p>
+<p><span style="padding: 2px 5px; border: 2px solid #670F3B; border-radius: 4px; color: #670F3B;"><strong>Storregional nodstad:</strong></span></p>
 <ul>
-<li><p>Storregional nodstad: Centralort med stor andel natt- och dagbefolkning inklusive alla funktioner i högre grad (<em>service, utbildning, vård</em>)</p></li>
-<li><p>Centralort: Större tätort i kommunen</p></li>
-<li><p>Arbetsort: Tätorter som har under 50% utpendlare över tätort</p></li>
+<li>Centralort med enskilt störst folkmängd i länet, stor natt- och dagbefolkning inklusive alla samhällsfunktioner i högre grad (<em>service, utbildning, vård</em>) <br></li>
 </ul>
-<p>-Dagbefolkningen är stor i relation till nattbefolkningen (lägre värde än 3 i natt/dagbefolkning) <br> (<em>ju lägre värde på natt/dagbefolkning desto fler invånare är förvärvsarbetande med arbete i orten</em>)</p>
-<p>-Över 400 i dagbefolkning. <br></p>
+<p><span style="padding: 2px 5px; border: 2px solid #670F3B; border-radius: 4px; color: #670F3B;"><strong>Centralort:</strong></span></p>
 <ul>
-<li>Serviceort: Tätorter som har under 50% utpendlare över tätort</li>
+<li>Huvudort, befolkningsmässigt störst tätort i respektive kommun <br></li>
 </ul>
-<p>-Dagbefolkningen är stor i relation till nattbefolkningen men mindre än arbetsort (lägre värde än 5 i natt/dagbefolkning)</p>
-<p>-Över 1000 i folkmängd.<br></p>
-<p>-Undantag: (<em>känd information om att viss service finns och uppfyller nästintintill alla krav för serviceort</em>)</p>
+<p><span style="padding: 2px 5px; border: 2px solid #670F3B; border-radius: 4px; color: #670F3B;"><strong>Arbetsort:</strong></span></p>
 <ul>
-<li>Bostadsort med viss service: Bostadsort med servicegrad 3–4:</li>
+<li><p>Tätorter som har under 50% utpendlare över tätortsgräns</p></li>
+<li><p>Dagbefolkningen är mycket stor i relation till nattbefolkningen (nattbefolkning dividerat med dagbefolkning: andelen förvärsarbetande med arbetsställe i orten). Ju lägre värde på nattbefolkning i relation till dagbefolkning desto fler invånare är förvärvstarbetande med arbete i orten</p></li>
+<li><p>Över 400 personer i dagbefolkning <br> <br></p></li>
 </ul>
-<p>-Servicegrad 1: paketombud</p>
-<p>-Servicegrad 2: paketombud + dagligvarubutik (obemannad eller begränsat utbud)</p>
-<p>-Servicegrad 3: dagligvarubutik (bemannad fullt utbud)</p>
-<p>-Servicegrad 4: paketombud + dagligvarubutik (bemannad fullt utbud)</p>
+<p><span style="padding: 2px 5px; border: 2px solid #670F3B; border-radius: 4px; color: #670F3B;"><strong>Serviceort:</strong></span></p>
 <ul>
-<li>Bostadsort:</li>
+<li><p>Tätorter som har under 50% utpendlare över tätort</p></li>
+<li><p>Dagbefolkningen är stor i relation till nattbefolkningen men i mindre utsträckning än för arbetsorter (nattbefolkning dividerat med dagbefolkning)</p></li>
+<li><p>Över 1 000 personer i folkmängd<br></p></li>
 </ul>
-<p>-Tätorter Över 50% utpendlare över tätort</p>
-<p>-Tätorter som har under 50% utpendlare över tätort och stor andel nattbefolkning i relation till dagbefolkning (högre värde än 10 i natt/dagbefolkning). <br> (<em>ju högre värde på natt/dagbefolkning desto fler invånare är förvärvsarbetande med bostad i orten</em>). <br></p>
-<p>-Tätorter som har under 50% utpendlare över tätort och högre värde än 10 i natt/dagbefolkning men som har under 1000 i folkmängd. <br></p>
-<p>(<em>Tätorter utan några specifika funktioner, men kan inneha någon typ av service, exemplevis paketombud eller obemannad butik</em>) <br></p>
+<p>-Undantag: (<em>känd information om att viss service finns och uppfyller nästintill alla krav för serviceort</em>) <br> <br></p>
+<p><span style="padding: 2px 5px; border: 2px solid #670F3B; border-radius: 4px; color: #670F3B;"><strong>Bostadsort med viss service:</strong></span></p>
 <ul>
-<li><p>Småort: Ort med &lt;50-200 invånare</p></li>
-<li><p>Utanför tätort: Övrig landsbygd</p></li>
+<li><p>Tätorter med över 50% utpendlare över tätortsgräns</p></li>
+<li><p>Tätorter med under 50% utpendlare över tätortsgräns, där nattbefolkningen är större än dagbefolkningen (nattbefolkning dividerat med dagbefolkning) <br></p></li>
+<li><p>Uppfyller inte kraven för arbetsort eller serviceort <br></p></li>
+<li><p>Bostadsort med servicegrad på nivå 3–4 enligt Tillväxtverkets gradering: <br>- Servicegrad 4: paketombud + dagligvarubutik (bemannad fullt utbud) <br>- Servicegrad 3: dagligvarubutik (bemannad fullt utbud)</p></li>
 </ul>
 <p><br></p>
-<section id="ortstrukturens-utveckling" class="level4">
+<p><span style="padding: 2px 5px; border: 2px solid #670F3B; border-radius: 4px; color: #670F3B;"><strong>Bostadsort:</strong></span></p>
+<ul>
+<li><p>Tätorter med över 50% utpendlare över tätortsgräns</p></li>
+<li><p>Tätorter med under 50% utpendlare över tätortsgräns, där nattbefolkningen är större än dagbefolkningen (nattbefolkning dividerat med dagbefolkning) <br></p></li>
+<li><p>Uppfyller inte kraven för arbetsort eller serviceort <br></p></li>
+<li><p>Kan inneha någon typ av service, enligt servicegrad 1-2 enligt Tillväxtverkets gradering: <br>- Servicegrad 2: paketombud + dagligvarubutik (obemannad eller begränsat utbud) <br>- Servicegrad 1: paketombud <br></p></li>
+</ul>
+<p><span style="padding: 2px 5px; border: 2px solid #670F3B; border-radius: 4px; color: #670F3B;"><strong>Småort:</strong></span></p>
+<ul>
+<li>Ort med &lt;50-200 invånare <br> (I resterande del av rapporterns kartor förekommer inte småorterna. I tabellerna återkommer småorterna inom utanför tätort) <br></li>
+</ul>
+<p><span style="padding: 2px 5px; border: 2px solid #670F3B; border-radius: 4px; color: #670F3B;"><strong>Utanför tätort:</strong></span></p>
+<ul>
+<li>Övrig landsbygd <br> (Observera att utanför tätort inte förekommer i kartmaterialet i rapporten utan endast visas i tabellerna) <br> <br></li>
+</ul>
+<section id="ortstrukturens-utveckling" class="level4 page-columns page-full">
 <h4 class="anchored" data-anchor-id="ortstrukturens-utveckling"><strong>Ortstrukturens utveckling</strong></h4>
-<p>Från år 2013 till 2023 har orterna utvecklats i länet, vilket medfört en förändring av antalet orter. <br> Vissa nya tätorter har tillkommit sedan år 2013, medan andra tidigare tätorter inte längre defineras som tätort under senare tid. Ortstrukturens utveckling kan gå i riktning mot ett mer sammanhängande län eller mindre sammanhängande, vilket har en koppling till orternas betydelse och roll i den regionala geografin.</p>
+<p>Enligt SCB fanns det totalt cirka 470 tätorter i Östra Mellansverige med minst 200 invånare år 2013. Från år 2013 till 2023 har orterna utvecklats på olika sätt, vilket totalt sett har medfört en förändring av antalet orter. Vissa nya tätorter har tillkommit sedan år 2013, medan andra tidigare tätorter inte längre defineras som tätort (till exempel till följd av minskande befolkning). Detsamma gäller för småorterna i länet. <br> <br> Ortstrukturens utveckling kan gå i riktning mot ett mer sammanhängande län eller mindre sammanhängande, vilket har en koppling till orternas betydelse och roll i den regionala geografin. Nedan visas hur antalet orter per ortstyp har utvecklats under en tioårsperiod. Totalt sett har orterna i länet ökat från 95 till 119. I den andra fliken redovisas andelen folkmängd i de olika ortstyperna samt utvecklingen över tid. Att andelen folkmängd har minskat eller ökat i en ortstyp kan bero på att antalet orter har förändrats med tiden. Trots det går det att åskådliggöra en tydlig bild över i vilka ortstyper folkmängden är som störst respektive minst samt hur utvecklingen sett ut.</p>
 <div class="tabset-margin-container"></div><div class="panel-tabset">
 <ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true" href="">Antal orter per ortstyp</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false" href="">Folkmängd per ortstyp</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-3" role="tab" aria-controls="tabset-1-3" aria-selected="false" href="">Källa</a></li></ul>
 <div class="tab-content">
@@ -293,7 +339,7 @@ Erik Johansson, utvecklingsstrateg Samhällsutveckling</code></pre>
 
 </div>
 </div>
-<p>Kommentar: Tillgänglighetsindex finns inte att tillgå för år 2013, därför är det 0 i den klassen.</p>
+<p>Kommentar: Tillgänglighetsindex finns inte att tillgå för år 2013, därför är det 0 i klassen för bostadsort med viss service.</p>
 </div>
 <div id="tabset-1-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-3-tab">
 <p>Uppgifterna är hämtade från Statistiska centralbyråns Regiondatabas för Västmanland och därefter klassificerade efter den tidigare beskrivna metoden. Eftersom tillgänglighetsindex från Tillväxtverket inte finns för år 2013 har vi inte kunnat sätta motsvarande klassning för “Bostadsort med viss service”. Vi har dock valt att redovisa den för år 2023. Allt annat oförändrat skulle de aktuella orterna alltså vara klassade som Bostadsort år 2013.</p>
@@ -301,17 +347,21 @@ Erik Johansson, utvecklingsstrateg Samhällsutveckling</code></pre>
 </div>
 </div>
 </div>
-<p><br> Några av de tidigare småorterna har under senare tid utvecklats till bostadsorter bland annat på grund av befolkningsökning. <br> Vissa bostadsorter har med tiden utvecklats till service- eller arbetsort eller gått från serviceort till arbetsort eller tvärtom. <br> Till följd av orternas utveckling har den regionala geografin delvis förändrats då en del orter även minskat i befolkning, vilket kan göra att orten inte längre defineras som tätort. Vid beräkningen av tätorter kan därmed tätorterna avregistreras medan nya kommer till. De nya tätorterna registreras när befokningen i en ort passerar 200 invånare. Anledningen till att vissa kommuner har ett fåtal tätorter kan till exempel bero på att flera tätorter tidigare vuxit ihop till en enda. Småorter som har för få invånare kan även växa ihop på samma sätt till en tätort och därmed registreras som tätort. Västmanland har en hög tätortsgrad, 88 %, vilket är samma grad som för riket i helhet. Detta innebär vidare att 12 % av befolkningen i länet bor utanför tätort. Tätortsgraden anser andelen befolkning i tätorterna i förhållande till den totala befolkningen i länet (SCB 2024).</p>
-<p><br></p>
+<p><br> Några av de tidigare småorterna har under senare tid utvecklats till bostadsorter på grund av deras befolkningsökning. Vissa bostadsorter har med tiden utvecklats till service- eller arbetsort eller gått från serviceort till arbetsort eller tvärtom. Till följd av orternas utveckling har den regionala geografin delvis förändrats då en del orter även minskat i befolkning, vilket kan göra att orten inte längre defineras som tätort eller småort. Vid klassificering av orter kan därmed vissa orterna utgå medan andra, nya kommer till. De nya tätorterna registreras när befokningen i en ort passerar 200 invånare. Anledningen till att vissa kommuner har ett fåtal tätorter kan till exempel bero på att flera tätorter tidigare vuxit ihop till en enda. Småorter som på egen hand har för få invånare kan även växa ihop på samma sätt till en tätort, även om det är mindre vanligt. Västmanland har en hög tätortsgrad, 88 %, vilket är samma grad som för riket i helhet. Tätortsgraden anser andelen befolkning i tätorterna i förhållande till den totala befolkningen i länet. Detta innebär vidare att 12 % av befolkningen i länet bor utanför tätort.</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p><br>Tätortsgrad = Andel av länets invånare som bor i tätorter.</p>
+</div></div><p><br></p>
 </section>
 </section>
-<section id="befolkningsförändring-i-tätorterna" class="level2">
-<h2 class="anchored" data-anchor-id="befolkningsförändring-i-tätorterna">Befolkningsförändring i tätorterna</h2>
+<section id="befolkningsforandring" class="level2">
+<h2 class="anchored" data-anchor-id="befolkningsforandring">Befolkningsförändring i tätorterna</h2>
+<p>I Västmanland bor cirka 280 000 invånare och 88 % är bosatta i någon av länets tätorter. Länet har en av de högsta tätortsgraderna i Sverige, efter Stockholm och Skåne bland annat till följd av att länet är relativt litet till ytan. I tätorten Västerås bor cirka 130 000 invånare, vilket motsvarar nästan hälften av länets totala befolkning. De två näst största tätorterna är Köping, med cirka 18 500 invånare och Sala, med cirka 13 700 invånare. I länets 44 tätorter har befolkningen från år 2013 till 2023 ökat med cirka 21 700 invånare.</p>
 <div class="cr-section cr-column-screen overlay-left">
 <div class="narrative-col">
 <div class="trigger new-trigger" data-focus-on="cr-karta2">
 <div class="narrative">
-<p><strong>Befolkningsförändring</strong><br> För att visa på tätorternas utveckling i förhållande till de olika ortstyperna har det totala antalet invånare under ett tio årsintervall studerats. I de allra flesta orterna visas en positiv befolkningsutveckling mellan åren 2013–2023. Befolkningstillväxten har varit högre i de östra, särskilt sydöstra delarna av länet i jämförelse med de västra delarna. På ortsnivå framträder en tydlig bild av befolkningsökningen inom de redan mest befolkningstäta södra delarna av länet. De orter som haft en ökad befolkning ligger även mestadels i närheten av den storregionala nodstaden och centralorten Hallstahammar.<br> <br> Befolkningsförändringen i många orter visar sig även vara relativt oförändrad, främst i de sydvästra delarna av länet. De orter som har en negativ befolkningsutveckling befinns i de nordvästra samt centrala delarna av länet, där orterna i allmänhet är färre. Gränserna mellan nivåerna för befolkningsförändringen går från cirka -25 till -3,5 % (<em>minskat</em>), -2,5 till 2,8 % (<em>oförändrat</em>) och 5 till 100 % (<em>ökat</em>). De orter som har en utveckling på 100 % är nya orter som tillkommit under senare tid.</p>
+<p><strong>Befolkningsförändring</strong><br> För att visa på tätorternas utveckling i förhållande till de olika ortstyperna har det totala antalet invånare under ett tio årsintervall studerats. I de allra flesta orterna visas en positiv befolkningsutveckling mellan åren 2013–2023. Befolkningstillväxten har varit högre i de östra, särskilt sydöstra delarna av länet i jämförelse med de västra delarna. På ortsnivå framträder en tydlig bild av befolkningsökningen inom de redan mest befolkningstäta södra delarna av länet. De orter som haft en ökad befolkning ligger mestadels i närheten av den storregionala nodstaden Västerås och centralorten Hallstahammar. Befolkningsförändringen i många orter visar sig även vara relativt oförändrad, främst i de sydvästra delarna av länet. De orter som har en negativ befolkningsutveckling befinns i de nordvästra samt centrala delarna av länet, där orterna i allmänhet är färre. Gränserna mellan nivåerna för befolkningsförändringen går från cirka -25 % till -3,5 % (<em>minskat</em>), -2,5 % till 2,8 % (<em>oförändrat</em>) och 5 % till 100 % (<em>ökat</em>).<br> <br> Ett fåtal orter har en utveckling på 100 %, vilket är nya orter som tillkommit under senare tid. I samband med ortstrukturens utveckling är ett tydligt exempel tätorten Malmen (Gäddeholm) i Västerås kommun. Tätorternas officiella namn bestäms av Statistiska centralbyrån och utgår ofta ifrån en befintlig geografisk plats i området. Namnet kommer sannolikt att ändras i samband med kommande, officiella tätortsavgränsningar (som görs vart femte år).</p>
 </div>
 </div>
 </div>
@@ -325,17 +375,356 @@ Erik Johansson, utvecklingsstrateg Samhällsutveckling</code></pre>
 </div>
 </div>
 <p><br></p>
-<p>I Västmanland bor cirka 280 000 invånare och 88 % är bosatta i någon av tätorterna i länet. Länet har en av de högsta tätortsgraderna i Sverige, efter Stockholm och Skåne men är till ytan ett litet län. I den storregionala nodstaden Västerås bor cirka 130 000 invånare, vilket motsvarar nästan hälften av länets totala befolkning. Därefter har centralorterna Köping, cirka 18 500 invånare samt Sala, cirka 13 700 invånare. I de 44 tätorterna har befolkningen från år 2013 till 2023 ökat med cirka 21 700 invånare. Befolkningen i länet har mestadels ökat i bostads- och serviceorter som ligger i närheten av den storregionala nodstaden eller centralorterna Hallstahammar och Sala. Länets tätorter som har minskat i befolkning är främst bostads- och serviceorter, men som antingen ligger längre ifrån den storregionala nodstaden, centralorter eller i utkanten av kommunernas gränser. I Sverige har det skett en kraftig befolkningstillväxt i många delar av landet och ur ett internationellt perspektiv har urbaniseringen varit stark. Detta har inneburit en befolkningsutveckling i framför allt tätorter. Vid sidan av urbaniseringen minskar befolkningen i andra delar av landet såväl som inom länet, såsom i mindre bostadsorter, småorter samt övrig landsbygd (Bostadsplaneringskommittén SOU 2015:59). <br> <br></p>
-<p>Som tidigare nämnt har de flesta orter i länet haft en positiv befolkningsutveckling. Totalt är det 19 orter som haft en positiv befolkningsutveckling i Västmanland, medan 10 orter haft en negativ befolkningsutveckling. Från år 2000 till 2023 har befolkningen i tätorterna totalt ökat med 16 %. Småorterna har den största procentuella befolkningsökningen mellan åren 2000 och 2023, totalt 60%. I storregionala nodstaden, centralorterna och i de allra flesta arbetsorter är befolkningen som störst. Sett till antal personer har tillväxten från år 2013 till 2023 varit som störst i storregionala nodstaden och sedan serviceorter samt centralorter. I arbets- och bostadsorterna har befolkningen totalt sett minskat.</p>
-<p><br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br></p>
+<p>Befolkningen i länet har mestadels ökat i bostads- och serviceorter som ligger i närheten av den storregionala nodstaden Västerås eller centralorterna Hallstahammar och Sala. Tätorterna i länet som har minskat i befolkning är främst bostads- och serviceorter, som antingen ligger längre ifrån den storregionala nodstaden, centralorter eller i utkanten av kommunernas gränser. I Sverige har det skett en kraftig befolkningstillväxt i många delar av landet och ur ett internationellt perspektiv har urbaniseringen varit stark. Detta har inneburit en befolkningsutveckling i framför allt tätorter. Vid sidan av urbaniseringen minskar befolkningen i andra delar av landet såväl som inom länet. Det gäller främst mindre bostadsorter, småorter samt övrig landsbygd. Som tidigare nämnts har de flesta orter i länet haft en positiv befolkningsutveckling under den senaste tioårsperioden. Totalt är det 19 orter som haft en positiv befolkningsutveckling i Västmanland, medan 10 orter haft en negativ befolkningsutveckling. Från år 2000 till 2023 har befolkningen i tätorterna totalt ökat med 16 procent. Småorterna har den största procentuella befolkningsökningen mellan åren 2000 och 2023, totalt 60 procent.Det har dels tillkommit många småorter och dels blir den relativa ökningen större bland orter med liten folkmängd än bland de större orterna. Sett till antal personer har tillväxten från år 2013 till 2023 varit som störst i storregionala nodstaden och sedan serviceorter samt centralorter. I arbets- och bostadsorterna har befolkningen totalt sett minskat. <br></p>
 </section>
-<section id="nattbefolkning-utveckling" class="level2">
-<h2 class="anchored" data-anchor-id="nattbefolkning-utveckling">Nattbefolkning utveckling</h2>
+<section id="flyttning" class="level2">
+<h2 class="anchored" data-anchor-id="flyttning">Flyttning - övergripande bild</h2>
+<p>Flyttningar till och från länets tätorter redovisas dels övergripande per tätort och ortsklass och dels efter riktning (mellan två orter) nedan i dokumentet. För att ge en övergripande bild av hur flyttmönstren skiljer sig åt mellan orterna har vi tittat på den relativa nettoflyttningen, uttryckt som antalet inflyttare dividerat med antalet utflyttare och multiplicerat med 100. Ett värde som understiger 100 anger att antalet inflyttare är färre än antalet utflyttare, vilket ger negativ nettoflyttning. Omvänt gäller att ju högre värde desto fler inflyttare har orten i relation till utflyttare. Aggregerat hade bostadsorterna och Västerås högst relativ inflyttning. Centralorterna och bostadsorter med viss service hade omvänt högst relativ utflyttning under 2023. I övriga ortstyper var antalet inflyttare i princip det samma som antalet utflyttare.</p>
+<div class="cr-section cr-column-screen overlay-left">
+<div class="narrative-col">
+<div class="trigger new-trigger" data-focus-on="cr-karta_nettofl">
+<div class="narrative">
+<p>I de flesta större tätorter i länet ligger den relativa nettoflyttningen runt 100, ungefär lika många flyttar alltså in som ut. Fagersta, Norberg, Köping och Hallstahammar har en lägre relativ nettoflyttning, medan Skinnskatteberg under 2024 hade positiv nettopendling. I flyttningarna ingår såväl flyttningar över tätortsgräns inom den egna kommunen, inom det egna länet och mot tätorter i överiga Sverige. Ortens storlek kommer att påverka utfallet något, ju mindre ort desto större kan skillnaden mellan in- och utflyttare bli under ett enskilt år. <br> Utöver det vi kan kalla “attraktivitet” så spelar det roll vilken fas en ort är i demografiskt, hur åldersfördelningen ser ut. Om till exempel en traditionell bostadsort befinner sig i fasen att många ungdomar lämnar föräldrahemmet blir resultatet en negativ nettoflyttning, då det vanligen dröjer ettt antal år innan hushållsbildningen ändras i området (nya barnfamiljer flyttar in). Örtagården utanför Västerås kan vara ett sådant exempel. Områden med hög positiv nettoflyttning har ofta tillförts bostäder i form av nybyggnation eller befinner sig i omvänd demografisk fas, mindre äldre hushåll flyttar ut och yngre, större hushåll flyttar in. Tydliga exempel på det senare är Barkarö och Gäddeholm (Malmen).</p>
+</div>
+</div>
+</div>
+<div class="sticky-col">
+<div class="sticky-col-stack">
+<div id="cr-karta_nettofl" class="sticky">
+<iframe src="https://region-vastmanland.github.io/kartor/Nettoflyttning.html" width="225%" height="800">
+</iframe>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="inflyttning" class="level2">
+<h2 class="anchored" data-anchor-id="inflyttning">Inflyttning</h2>
+<p>Flyttningar över tätortsgräns är ett annorlunda studieobjekt jämfört med flyttningar över kommungräns. I det senare fallet är befolkningen som flyttar väldigt koncentrerade till vissa specifika åldersgrupper och orsakerna vanligen kopplade till studier eller arbete. Vad gäller flyttningar mellan tätorter berör de en större del av befolkningen i fler åldersgrupper och avser ofta mer vardagsnära orsaker till flyttningar, som till exempel behovet av större eller mindre bostad, närhet till skola, grönområden med mera. För tätorten Västerås betyder det till exempel att man har större inflyttning än utflyttning mot tätorter i övriga länet och övriga Sverige, men större utflyttning än inflyttning mot övriga tätorter i kommunen. De flesta övriga centralorter i länet har ett omvänt förhållande: fler inflyttare från den egna kommunen än utflyttare inom den samma. Alla centralorter i länet har negativt flyttnetto mot tätorter i övriga länet och övriga landet. Utöver Västerås har endast Kungsör haft positivt flyttnetto mot övriga länet och landet, vilket också syntes i befolkningsförändringen under 2024, då dessa två kommuner var de enda i länet som ökade sin befolkning.</p>
+<div class="cr-section cr-column-screen overlay-left">
+<div class="narrative-col">
+<div class="trigger new-trigger" data-focus-on="cr-kartainfl">
+<div class="narrative">
+<p><strong>Inflyttning</strong><br>Kartan visar flyttströmmar större än tio personer mellan tätorter i Västmanland (röda linjer) och mellan tätorter i länet och tätorter utanför Västmanland, utmärkt med gröna linjer. Mellan två orter i länet så är den flyttström som är störst ritad med den mörkare röda färgen. Det är till exempel fler som flyttar från Hallstahammars tätort till Västerås tätort än omvänt. Överlag visar kartan på Västerås betydelse för flyttningarna inom länet. Flyttningarna rör sig i mycket hög utsträckning till eller från Västerås tätort. Ett fåtal andra större strömmar syns, till exempel pyramiden som bildas mellan Köping, Arboga och Kungsör, där även Kolsva kommer med som en satellit. Även mellan Fagersta, Norberg och Skinnskatteberg samt mellan Hallstahammar, Surahammar inklusive Kolbäck och Ramnäs visar ett eget flyttmönster. Inlyttning från orter i övriga landet är relativt starkt begränsat till tätorterna Stockholm, Örebro, Uppsala och Eskilstuna samt Enköping. Därutöver är det främst de större universitets- och högskoleorterna runt om i landet som inflyttningen utgår ifrån.</p>
+</div>
+</div>
+</div>
+<div class="sticky-col">
+<div class="sticky-col-stack">
+<div id="cr-kartainfl" class="sticky">
+<iframe src="https://region-vastmanland.github.io/kartor/Inflyttning.html" width="225%" height="800">
+</iframe>
+</div>
+</div>
+</div>
+</div>
+<p><br> <br> I tabellerna redovisas de totala flyttningarna över tätortsgräns för de olika ortsklasserna. Tabellen med summerade data blir ett komplement till kartbilden, som visar enskilda flyttströmmar mellan två orter. Här framträder istället andra mönster, inte minst i fliken som visar tabellen efter var inflyttaren tidigare bodde. Notera att relationen hela tiden avser flyttningar mellan tätorter. Här redovisas även “utanför tätort” (som inte syns i kartorna då det motsvarar en större geografi än en enskild punkt). Inflyttningen till utanför tätort (som även inbegriper småorter) motsvarar 12 procent av flyttningarna.</p>
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-2-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-1" role="tab" aria-controls="tabset-2-1" aria-selected="true" href="">Inflyttning totalt</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-2-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-2" role="tab" aria-controls="tabset-2-2" aria-selected="false" href="">Inflyttning inom och utom länet</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-2-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-3" role="tab" aria-controls="tabset-2-3" aria-selected="false" href="">Källa</a></li></ul>
+<div class="tab-content">
+<div id="tabset-2-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-2-1-tab">
+<div class="cell">
+<div class="cell-output-display">
+<table class="caption-top table table-sm table-striped small" data-quarto-postprocess="true">
+<thead>
+<tr class="header">
+<th style="text-align: left;" data-quarto-table-cell-role="th">Ortsklass</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">Inflyttning totalt</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">Inflyttning totalt %</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Storregional nodstad</td>
+<td style="text-align: right;">7133</td>
+<td style="text-align: right;">44</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Centralort</td>
+<td style="text-align: right;">4716</td>
+<td style="text-align: right;">29</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Utanför tätort</td>
+<td style="text-align: right;">2011</td>
+<td style="text-align: right;">12</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Arbetsort</td>
+<td style="text-align: right;">876</td>
+<td style="text-align: right;">5</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Bostadsort</td>
+<td style="text-align: right;">774</td>
+<td style="text-align: right;">5</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Serviceort</td>
+<td style="text-align: right;">659</td>
+<td style="text-align: right;">4</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Bostadsort med viss service</td>
+<td style="text-align: right;">135</td>
+<td style="text-align: right;">1</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Totalt</td>
+<td style="text-align: right;">16304</td>
+<td style="text-align: right;">100</td>
+</tr>
+</tbody>
+</table>
+
+
+</div>
+</div>
+</div>
+<div id="tabset-2-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-2-2-tab">
+<div class="cell">
+<div class="cell-output-display">
+<table class="caption-top table table-sm table-striped small" data-quarto-postprocess="true">
+<thead>
+<tr class="header">
+<th style="text-align: left;" data-quarto-table-cell-role="th">Ortsklass</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">Inflyttning inom kommun</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">Inflyttning inom län men över kommun</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">Inflyttning inom landet men över län</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Storregional nodstad</td>
+<td style="text-align: right;">1196</td>
+<td style="text-align: right;">1336</td>
+<td style="text-align: right;">4601</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Centralort</td>
+<td style="text-align: right;">838</td>
+<td style="text-align: right;">1634</td>
+<td style="text-align: right;">2244</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Utanför tätort</td>
+<td style="text-align: right;">1025</td>
+<td style="text-align: right;">430</td>
+<td style="text-align: right;">556</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Arbetsort</td>
+<td style="text-align: right;">502</td>
+<td style="text-align: right;">171</td>
+<td style="text-align: right;">203</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Bostadsort</td>
+<td style="text-align: right;">471</td>
+<td style="text-align: right;">152</td>
+<td style="text-align: right;">151</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Serviceort</td>
+<td style="text-align: right;">375</td>
+<td style="text-align: right;">130</td>
+<td style="text-align: right;">154</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Bostadsort med viss service</td>
+<td style="text-align: right;">69</td>
+<td style="text-align: right;">14</td>
+<td style="text-align: right;">52</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Totalt</td>
+<td style="text-align: right;">4476</td>
+<td style="text-align: right;">3867</td>
+<td style="text-align: right;">7961</td>
+</tr>
+</tbody>
+</table>
+
+
+</div>
+</div>
+</div>
+<div id="tabset-2-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-2-3-tab">
+<p>Uppgifterna är hämtade från Statistiska centralbyråns Regiondatabas för Västmanland och därefter klassificerade efter den tidigare beskrivna metoden. Avser samtliga flyttningar mellan tätorter i Västmanland och övriga Sverige. “Inflyttning inom kommun” avser således inflyttning till tätorter i respektive ortsklass från en annan tätort inom kommunen och så vidare.</p>
+<p>Källa: SCB</p>
+</div>
+</div>
+</div>
+</section>
+<section id="utflyttning" class="level2">
+<h2 class="anchored" data-anchor-id="utflyttning">Utflyttning</h2>
+<p>In- och utflyttningen mellan orter kan både skapa möjligheter och utmaningar, dels gällande befolkningsmängd och befolkningssammansättning och dels för bostadsmarknaden, arbetsmarknaden samt tillgängligheten till serviceutbud. Tidigare hade flyttningarna en större roll gällande arbetskraftens rörlighet. I takt med mer välutvecklad infrastruktur har människors möjlighet till att bo och arbeta i olika orter ökat, vilket har gjort att arbetspendlingen övertagit en större del av den tidigare roll som flyttningar hade. Flera olika faktorer påverkar benägenheten att flytta utifrån ett sådant perspektiv. I en studie som genomfördes år 2023 på uppdrag av regionen framkom att en utbyggd infrastruktur, med ökade möjligheter att nå större kluster av arbetsställen, sannolikt kommer att påverka bostadsmarknaden i termer av ekonomisk rationalitet. Utvecklingen av det så kallade Tobins q-måttet förväntades öka i alla länets kommuner utifrån de insatser som finns beskrivna i Länstransportplanen. Det kan låta teoretiskt, men vad det främst betyder i praktiken är att omlandet som drar nytta av den storregionala nodstadens arbetsplatsutbud utökas och därmed möjliggör för både kvarboende och utbyggnad i de delar av länet där verkligheten inte ser ut så idag.</p>
+<p>Flyttningsmönster är relativt stabila över tid, även om förändringar naturligtvis uppstår då och då. I samband med pandemin såg vi i länet en utökad utflyttning från Västerås till närliggande mindre kommuner. Det var ett mönster som syntes i flera delar av landet. Gemensamt är dock att det blev en relativt kort “grön våg”, efter bara ett par år så såg flyttmönstren åter ut som före pandemin. En större och mer långtgående förändring är att hela Sverige har fått en minskad invandring under 2020-talet. Siffror för in- och utvandring visas inte i den här studien då den fokuserar på svenska tätorter, men även inrikes omflyttning kan påverkas, då det är relativt vanligt efter den initiala invandringen. Inrikes inflyttning har minskat till alla kommuner i länet, undantaget Västerås, under 2020-talet.</p>
+<div class="cr-section cr-column-screen overlay-left">
+<div class="narrative-col">
+<div class="trigger new-trigger" data-focus-on="cr-kartautfl">
+<div class="narrative">
+<p><strong>Utflyttning</strong><br>Kartan över utflyttningen mellan tätorter i Västmanland samt mellan orter i Västmanland och tätorter utanför länet (blåa linjer) påminner mycket om kartan över inflyttning. Linjerna för flyttningar inom länet är de samma som i inflyttningskartan. Centralorternas utflyttning inom länet visar att Hallstahammar, Surahammar, Sala, Köping, Fagersta och Skinnskatteberg har sin starkaste riktning till Västerås, medan Norberg har störst utflyttning till Fagersta. Kungsör har sin starkaste riktning utanför länet mot Eskilstuna och inom länet till Köping. Kungsör har däremot i princip lika stor in- som utflyttning mot Köping. Arboga har den starkaste riktningen utanför länet mot Örebro och därefter inom länet till Västerås men även Köping. I kartan syns även en koncentration runt den Västerås där särskilt de närmaste arbetsorterna har en starkare riktning mot Västerås till skillnad från andra mindre orter. Utflyttningen till andra orter utanför länet utgår till störst del ifrån Västerås och riktar sig mot tätorterna Stockholm, Uppsala och Örebro samt Eskilstuna och Enköping. Även utflyttning till Göteborg och Linköping är relativt stor.</p>
+</div>
+</div>
+</div>
+<div class="sticky-col">
+<div class="sticky-col-stack">
+<div id="cr-kartautfl" class="sticky">
+<iframe src="https://region-vastmanland.github.io/kartor/Utflyttning.html" width="225%" height="800">
+</iframe>
+</div>
+</div>
+</div>
+</div>
+<p><br> <br></p>
+<p>I tabellerna redovisas de totala flyttningarna över tätortsgräns för de olika ortsklasserna. Tabellen med summerade data blir ett komplement till kartbilden, som visar enskilda flyttströmmar mellan två orter. I tabellen framträder istället andra mönster, inte minst i tabellen som visar utflyttning inom och utom länet. I Västerås och övriga centralorter är utflyttning över länsgräns den enskilt största posten, medan det är en mer begränsad rörelse för övriga ortsklasser. Notera att relationen hela tiden avser flyttningar mellan tätorter. Här redovisas även “utanför tätort” (som inte syns i kartorna då det motsvarar en större geografi än en enskild punkt). Dessa flyttningar motsvarar 12 procent av alla utflyttningar.</p>
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-3-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-3-1" role="tab" aria-controls="tabset-3-1" aria-selected="true" href="">Utflyttning totalt</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-3-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-3-2" role="tab" aria-controls="tabset-3-2" aria-selected="false" href="">Utflyttning inom och utom länet</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-3-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-3-3" role="tab" aria-controls="tabset-3-3" aria-selected="false" href="">Källa</a></li></ul>
+<div class="tab-content">
+<div id="tabset-3-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-3-1-tab">
+<div class="cell">
+<div class="cell-output-display">
+<table class="caption-top table table-sm table-striped small" data-quarto-postprocess="true">
+<thead>
+<tr class="header">
+<th style="text-align: left;" data-quarto-table-cell-role="th">Ortsklass</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">Utflyttning totalt</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">Utflyttning totalt %</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Storregional nodstad</td>
+<td style="text-align: right;">6636</td>
+<td style="text-align: right;">41</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Centralort</td>
+<td style="text-align: right;">5217</td>
+<td style="text-align: right;">32</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Utanför tätort</td>
+<td style="text-align: right;">1970</td>
+<td style="text-align: right;">12</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Arbetsort</td>
+<td style="text-align: right;">878</td>
+<td style="text-align: right;">5</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Bostadsort</td>
+<td style="text-align: right;">703</td>
+<td style="text-align: right;">4</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Serviceort</td>
+<td style="text-align: right;">662</td>
+<td style="text-align: right;">4</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Bostadsort med viss service</td>
+<td style="text-align: right;">148</td>
+<td style="text-align: right;">1</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Totalt</td>
+<td style="text-align: right;">16214</td>
+<td style="text-align: right;">100</td>
+</tr>
+</tbody>
+</table>
+
+
+</div>
+</div>
+</div>
+<div id="tabset-3-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-3-2-tab">
+<div class="cell">
+<div class="cell-output-display">
+<table class="caption-top table table-sm table-striped small" data-quarto-postprocess="true">
+<thead>
+<tr class="header">
+<th style="text-align: left;" data-quarto-table-cell-role="th">Ortsklass</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">Utflyttning inom kommun</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">Utflyttning inom län men över kommun</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">Utflyttning inom landet men över län</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Storregional nodstad</td>
+<td style="text-align: right;">1234</td>
+<td style="text-align: right;">1147</td>
+<td style="text-align: right;">4255</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Centralort</td>
+<td style="text-align: right;">691</td>
+<td style="text-align: right;">1914</td>
+<td style="text-align: right;">2612</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Utanför tätort</td>
+<td style="text-align: right;">1109</td>
+<td style="text-align: right;">375</td>
+<td style="text-align: right;">486</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Arbetsort</td>
+<td style="text-align: right;">527</td>
+<td style="text-align: right;">183</td>
+<td style="text-align: right;">168</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Bostadsort</td>
+<td style="text-align: right;">464</td>
+<td style="text-align: right;">94</td>
+<td style="text-align: right;">145</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Serviceort</td>
+<td style="text-align: right;">351</td>
+<td style="text-align: right;">145</td>
+<td style="text-align: right;">166</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Bostadsort med viss service</td>
+<td style="text-align: right;">86</td>
+<td style="text-align: right;">18</td>
+<td style="text-align: right;">44</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Totalt</td>
+<td style="text-align: right;">4462</td>
+<td style="text-align: right;">3876</td>
+<td style="text-align: right;">7876</td>
+</tr>
+</tbody>
+</table>
+
+
+</div>
+</div>
+</div>
+<div id="tabset-3-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-3-3-tab">
+<p>Uppgifterna är hämtade från Statistiska centralbyråns Regiondatabas för Västmanland och därefter klassificerade efter den tidigare beskrivna metoden. Avser samtliga flyttningar mellan tätorter i Västmanland och övriga Sverige. “Utflyttning inom kommun” avser således utflyttning från tätorter i respektive ortsklass till en annan tätort inom kommunen och så vidare.</p>
+<p>Källa: SCB</p>
+</div>
+</div>
+</div>
+<p><br></p>
+</section>
+<section id="sysselsatta" class="level2">
+<h2 class="anchored" data-anchor-id="sysselsatta">Sysselsatta efter bostadens belägenhet</h2>
+<p>Utvecklingen av antalet förvärsarbetande beror på geografiska och ekonomiska förutsättningar som påverkar orternas tillväxtmöjligheter. Nattbefolkningen omfattas av antalet förvärsarbetande 16 år och äldre med bostad i orten, det vill säga den bofasta befolkningen inom ortens gränser. Nattbefolkningen i en ort kan ha sitt arbetställe inom eller utanför orten. I orter där nattbefolkningen växer, ökar ofta behovet av lokal sysselsättning och service, vilket vidare kan skapa nya arbetstillfällen samt stärka orterns ekonomi. Medan orter som får mindre nattbefolkning innebär att färre bor kvar eller flyttar från orten, vilket kan medföra en försvagning av den lokala arbetsmarknaden och ortens utveckling. Kombinationen av tillgänglighet till en centralort eller andra omkringliggande orter, lokal arbetsmarknad samt goda kommunikationer kan möjliggöra både för inflyttning och för fler människor att stanna kvar i orten. På en övergripande nivå har den totala förvärsarbetande nattbefolkningen i Västmanland ökat fram till år 2023. Fler antal orter i länet har även haft en ökad nattbefolkning mellan åren 2013-2023 än minskad. Den totala förvärvsarbetande nattbefolkningen i länet går från cirka 100 i den minsta tätorten till 64 000 sysselsatta i Västerås år 2023.</p>
 <div class="cr-section cr-column-screen overlay-left">
 <div class="narrative-col">
 <div class="trigger new-trigger" data-focus-on="cr-karta3">
 <div class="narrative">
-<p>text</p>
+<p><strong>Sesselsatta efter bostadens belägenhet</strong><br>På motsvarande sätt som för befolkningsförändringen åskådliggör denna karta en ökad nattbefolkning mellan åren 2013-2023 främst inom de mest befolkningstäta södra delarna av länet. Där den förvärsarbetande nattbefolkningen har ökat som mest procentuellt är i de orter som är belägna i närheten av Västerås. Sett till centralorternas nattbefolkning har de flesta ökat eller varit relativt oförändrad. Centralorterna Kungsör, Arboga och Sala har haft den största ökningen av nattbefolkning efter Västerås, medan Surahammar och Köping har haft en något mindre ökning. Orterna i länet som har haft en relativt oförändrad utveckling är Norberg, Fagersta samt Hallstahammar och Skinnskatteberg som minskat i nattbefolkning. <br> <br> Vad gäller arbetsorterna i länet har de allra flesta haft en ökad förvärvsarbetad nattbefolkning, särskilt de orter som ligger i anslutning till centralorterna eller Västerås. Detta gäller även för serviceorterna. Bostadsorterna med viss service, som ligger mer utspridda i länet, har antingen haft en relativt oförändrad utveckling eller minskad nattbefolkning. I takt med att regionala centrum växer, ökar oftast nattbefolkningen i omrkingliggande bostadsorter. För bostadsorterna i länet har emellertid utvecklingen av nattbefolkningen varierat beroende på geografisk kontext. Gränserna mellan nivåerna för nattbefolkningens utveckling går från cirka -40 till -7 % (<em>minskat</em>), -4,5 till 5,5 % (<em>oförändrat</em>) och 6 till 100 % (<em>ökat</em>). (<em>De orter som har 100 % utveckling är nya orter som tillkommit under senare tid</em>) </p>
 </div>
 </div>
 </div>
@@ -351,13 +740,14 @@ Erik Johansson, utvecklingsstrateg Samhällsutveckling</code></pre>
 <p><br></p>
 <p><br></p>
 </section>
-<section id="dagbefolkning-utveckling" class="level2">
-<h2 class="anchored" data-anchor-id="dagbefolkning-utveckling">Dagbefolkning utveckling</h2>
+<section id="sysselsatta-efter-arbetsställets-belägenhet" class="level2">
+<h2 class="anchored" data-anchor-id="sysselsatta-efter-arbetsställets-belägenhet">Sysselsatta efter arbetsställets belägenhet</h2>
+<p>Hur den förvärvsarbetande dagbefolkningen är fördelad i länet ger en bild av flerkärnigheten samt orternas funktion och roll i ortsystemet. Hur dagbefolkningen har utvecklats under senare tid ger en uppfattning om orternas ekonomiska aktiviteter samt dragningskraft. Dagbefolkningen omfattas av antalet förvärvsarbetande 16 år och äldre med arbetsställe i orten oberoende bostadens belägenhet. Dagbefolkningen i en ort kan bestå av både lokalt boende inklusive befolkning som pendlar in till orten för arbete. I orter där dagbefolkningen haft en positiv utveckling, ökar ofta behovet av arbetsmarknadsutveckling, service och infrastruktur, vilket i sin tur kan skapa fler arbetstillfällen och stärka orterns lokala ekonomiska utveckling. Omvänt kan orter med negativ utveckling av dagbefolkningen få svårare att behålla ortens lokala arbetsmarknad samt påverka den ekonomiska utvecklingen negativt. Den totala dagbefolkningen i Västmanland bestod av cirka 131 000 sysselsatta år 2023 år och har ökat från 2013. Fler orter har haft en ökad dagbefolkning än minskad. För den totala befolkningen varierade den förvärvsarbetande dagbefolkningen i länet mellan olika tätorter, från cirka 10 personer i den minsta tätorten till 70 000 sysselsatta i Västerås år 2023.</p>
 <div class="cr-section cr-column-screen overlay-left">
 <div class="narrative-col">
 <div class="trigger new-trigger" data-focus-on="cr-karta4">
 <div class="narrative">
-<p>text</p>
+<p><strong>Sysselsatta efter arbetsställets belägenhet</strong><br>Utvecklingen av den förvärvsarbetande dagbefolkningen i länet år 2023 visar sig även vara varierande beroende på orternas geografiska placering, tillgänglighet samt arbetsmarknad. Här syns en koncentration av positiv utveckling av dagbefolkningen mellan åren i de mest befolkningstäta delarna samt främst i anslutning till Västerås. I kartan visas det att fler centralorter haft en ökad dagbefolkning, där Skinnskattberg och Kungsör sticker ut med störst utveckling. Därefter har centralorterna Sala, Surahammar och Köping störst ökad dagbefolkning. Orterna i länet som har haft en relativt oförändrad utveckling är Hallstahammar, Fagersta och Norberg och Arboga som minskat i dagbefolkning. Till skillnad från utvecklingen av nattbefolkningen har fler orter haft en positiv utveckling av sin dagbefolkning. De allra flesta arbets- och serviceorterna i länet har haft en ökad dagbefolkning, främst de orter som är belägna intill en större arbetsmarknad. Fler orter har minskat i dagbefolkning än de som haft en oförändrad utveckling. Dessa är bostadsorter, bostadsorter med viss service och serviceorter som antingen är belägna längre ifrån centralorterna eller i närheten av kommunernas gränser. Avgränsningen för nivåerna går från cirka -80 till -9 % (<em>minskat</em>), -6 till 6 % (<em>oförändrat</em>) och 7 till 200 % (<em>ökat</em>). </p>
 </div>
 </div>
 </div>
@@ -371,15 +761,19 @@ Erik Johansson, utvecklingsstrateg Samhällsutveckling</code></pre>
 </div>
 </div>
 <p><br></p>
-<p><br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br></p>
+<p>Sammantaget visar utvecklingen av den förvärvsarbetande natt- och dagbefolkningen arbetsmarknadsregionens struktur i förhållande till de olika ortstyperna. Några mönster kan urskiljas genom att jämföra utvecklingen av nattbefolkningen respektive dagbefolkningen. De allra flesta större orter såsom Västerås, centralorterna samt arbets- och serviceorter har i flera fall en liknande utveckling av natt- och dagbefolkning. Exempelvis orter som har utvecklats positivt i form av ekonomi, bostäder samt infrastruktur får ofta både fler invånare som bosätter sig i orten samt fler invånare som har sitt arbetsställe i orten. I ett mindre antal orter skiljer sig utvecklingsriktningen åt mellan natt- och dagbefolkningen, exempelvis inom centralorterna Skinnskatteberg och Arboga. När en ort har en minskad nattbefolkning men ökad dagbefolkning innebär det att det är en minskad befolkning som har sin bostad i orten men en ökad befolkning som har sitt arbetsställe i orten. Detta kan speglas av funktionella samband i förhållande till exempelvis bostadsbrist, serviceutbud eller arbets- och utbildningsmöjligheter i orten, men även orterns relation till andra orter. Omvänt, om en ort har ökad nattbefolkning men minskad utveckling i dagbefolkning, kan ortens befolkning utvecklats med fler som blivit permanent bosatta medan arbetstillfällena och serviceutbudet kommit att vara mer begränsat över tid. Vidare sammankopplas det med faktorer som ortens karaktär, dragningskraft eller attraktivitet som kan påverka utvecklingen. Många av de mindre orterna sett till befolkning har under tidigare decennier påverkats av strukturomvandlingar där bland annat sysselsättningen inom tillverkningsindustri minskat och andra tjänstenäringar ökat. Därav har även flera av centralorternas beroende av tillväxt i kärnorna ökat.</p>
+<p>I länet såväl som övriga Sverige har det pågått en geografisk koncentration av befolkning samt arbetstillfällen. På lokal nivå skapar detta en ökad koncentration av arbetstillfällen till orter med funktion och karaktär som arbetsmarknadscentrum. I jämförelse med arbetstillfällena är å andra sidan befolkningen mer spridd lokalt inom gränserna, vilket gör att mindre orter generellt har mer utvecklingsförutsättningar för nattbefolkning än dagbefolkning. De orter som har bäst förutsättningar sett till koncentrationen av befolkning samt arbete tenderar att även ha högre tillgänglighet till större arbetsmarknadscentrum. Ju större dagbefolkning en ort har, desto större kan även skillnaderna bli mellan dag- och nattbefolkningen, vilket är mer vanligt för den storregionala nodstaden Västerås, centralorter samt arbetsorter som fungerar som lokala arbetsmarknadscentrum. Orter som har mindre skillnad mellan dag- nattbefolkning kan vara mer självförsörjande, vilket omfattas av många som både bor och arbetar i samma ort.</p>
+<p><br></p>
 </section>
-<section id="försörjningskvoten-i-tätorterna" class="level2">
-<h2 class="anchored" data-anchor-id="försörjningskvoten-i-tätorterna">Försörjningskvoten i tätorterna</h2>
+<section id="forsorjningskvot" class="level2">
+<h2 class="anchored" data-anchor-id="forsorjningskvot">Försörjningskvoten i tätorterna</h2>
+<p>För att få en förståelse för orternas framtida utvecklingspotential samt tillväxtförutsättningar ur ett försörjningsperspektiv är det viktigt att beakta befolkningsstrukturen i länet. Ett mått som många gånger används för att analysera försörjningssituationen är demografisk försörjningskvot, vilket benämns som summan av yngre och äldre i befolkningen (åldrarna 0-19 och 65+) i förhållande till befolkningen i arbetsför ålder (20-64). Åldersstrukturen skiljer sig åt för olika kommuner och orter, vilket betyder att utmaningen varierar mellan olika platser. Ju högre försörjningskvoten är desto tyngre är försörjningsbördan, med andra ord få som försörjer många i en ort. En åldrande befolkning, låga födelsetal samt att fler yngre är benägna att flytta från mindre till större orter påverkar försörjningskvoten, vilket har en stor betydelse för ortens långsiktiga utveckling. År 2023 var länets totala försörjningskvot cirka 82. Detta innebär att på 100 personer i de mest arbetsföra åldrarna 20-64 år förekommer det 82 personer som är yngre eller äldre. Generellt återkommande är att försörjningskvoten ofta är lägre i större orter då de vanligtvis har ett bredare utbud när det kommer till arbetstillfällen, service samt utbildning. I länets olika tätorter varierar försörjningskvoten mellan cirka 50 till 120.</p>
 <div class="cr-section cr-column-screen overlay-left">
 <div class="narrative-col">
 <div class="trigger new-trigger" data-focus-on="cr-karta5">
 <div class="narrative">
-<p>text</p>
+<p><strong>Försörjningskvot</strong> <br>Försörjningskvoten bland länets orter år 2023 skiljer sig åt där det är lika många orter som har hög respektive låg, varav något färre antal orter har medel försörjningskvot. Tätorterna med hög försörjningskvot är utspridda över hela länet men är i större utsträckning goegrafiskt belägna i de mer norra delarna. Ungefär 9 orter har en försörjningskvot över 100 där de flesta omkringliggande orter har en försörjningskvot från medel till hög. De orterna som har högst försörjningskvot är främst bostadsorter samt bostadsorter med viss service. Nästintill lika många centralorter har låg som medel försörjningskvot. Tätorterna med lägre försörjningskvot återfinns i de mest befolkningstäta södra delarna av länet, där de med lägst är bostadsorter, arbetsorter samt Västerås. I de allra flesta arbets- och serviceorter som har god tillgänglighet samt som även ligger i anslutning till den storregionala nodstaden varierar försörjningskvoten mellan låg till medel. I samtliga fall visas en medel till högre försörjningskvot i de mer perfiera delarna av länet. Avgränsningen för nivåerna går från cirka 50 till 84 (<em>låg</em>), 87 till 94 (<em>medel</em>) och 95 till 120 (<em>hög</em>).<br>
+</p>
 </div>
 </div>
 </div>
@@ -397,11 +791,12 @@ Erik Johansson, utvecklingsstrateg Samhällsutveckling</code></pre>
 </section>
 <section id="försörjningskvotens-förändring" class="level2">
 <h2 class="anchored" data-anchor-id="försörjningskvotens-förändring">Försörjningskvotens förändring</h2>
+<p>Den demografiska utvecklingen kan omvandla befolkningsstrukturen och försörjningskvotens förändring i orterna kan ställa krav på anpassning samt utmaningar för framtiden. Beroende på ortens storlek och geografiska läge utvecklas den lokala försöjningskvoten på varierande sätt i länet. Generellt sett förekommer vanligtvis en ökning i mindre orter och mer perifera delar, vilket beror på att en större andel yngre invånare flyttar ifrån samtidigt som andelen äldre bor kvar ökar. När befolkningen i arbetsför ålder i allt större grad koncentreras till större orter som Västerås och centralorterna kommer försörjningsbördan med större sannolikhet att öka i de mer perifera delarna. Orter som fungerar som mellannoder kan attrahera fler i arbetsför ålder från omkringliggande mindre orter, vilket tillfälligt kan leda till en lägre försörjningskvot. Förändringen kan skapa mer skilda förutsättningar för den lokala utvecklingen samt resursfördelningen mellan de olika orterna i länet. Försörjningskvotens förändring över tid förstärker bilden av att den storregionala nodstaden samt mindre närliggande orter har en mer gynnsam och positiv utveckling. I länet totalt sett från år 2013 till 2023 har försörjningskvoten ökat med cirka 5 enheter.</p>
 <div class="cr-section cr-column-screen overlay-left">
 <div class="narrative-col">
 <div class="trigger new-trigger" data-focus-on="cr-karta6">
 <div class="narrative">
-<p>text</p>
+<p><strong>Försörjningskvotens förändring</strong><br>Kartan visar försörjningskvotens förändring i enheter mellan åren 2013-2023. De allra flesta tätorterna i länet har under tioårsperioden haft en ökande eller en relativt oförändrad försörjningskvot. Det finns dock även tätorter där försörjningskvoten har minskat. De centralorter som har haft en ökad försörjningskvot är Norberg, Sala, Köping, Fagersta, Surahammar och Kungsör. De allra flesta omkringliggande orterna, främst serviceorter samt bostadsorter med viss service, har dessutom fått se en ökad försörjningskvot. Centralorterna Arboga, Skinnskatteberg och Hallstahammar samt Västerås har haft en relativt oförändrad försörjningskvot. Vad gäller arbetsorterna så har nästintill alla haft en relativt positiv förändring. Tätorterna som haft en minskad försörjningskvot är främst belägna i de södra delarna av länet och består av bostadsorter, serviceorter samt arbetsorter. I jämförelse med föregående karta som visade försörjningskvoten för år 2023 syns ett mönster där de flesta orter med högre kvot även haft en relativt ökad eller oförändrad förändring. Samma synliggörs även för de orter som hade en låg försörjningskvot där de flesta omvänt genomgått en minskad eller oförändrad förändring. Avgränsningen för nivåerna går från cirka -20 till -3,20 (<em>minskat</em>), 1,30 till 5 (<em>oförändrat</em>) och 5,30 till 58 (<em>ökat</em>).</p>
 </div>
 </div>
 </div>
@@ -414,16 +809,39 @@ Erik Johansson, utvecklingsstrateg Samhällsutveckling</code></pre>
 </div>
 </div>
 </div>
+<p><br> Överlag ger måttet om demografisk försörjningskvot en översiktlig bild över hur försörjningssituationen ser ut gällande resursfördelning, service, välfärd samt ekonomisk utveckling i orterna. Befolkningsutvecklingen medför att färre ska försörja fler, vilket innebär att andelen i arbetsför ålder minskar. Generellt ökar andelen äldre i länet, i synnerhet 80 + medan andelen barn minskar. Koncentrationen av arbetstillfällen samt utbildningsmöjligheter i en ort är en påverkande faktor när det kommer till att upprätthålla en balanserad försörjning. Inom de nästkommande åren kommer försörjningskvoten i länet sannolikt att fortsätta stiga, vilket kan komma att skapa mer omfattande skillnader mellan de olika orterna. Värt att komma ihåg är också att den demografiska försörjningskvoten inte tar hänsyn till hur stor andel av befolkningen som ingår i arbetskraften som sysselsatta. Den faktiska försörjningskvoten är därför högre än vad den rent demografiska anger.</p>
 <p><br></p>
-<p><br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br></p>
+</section>
+<section id="pendling" class="level2">
+<h2 class="anchored" data-anchor-id="pendling">Pendling - övergripande bild</h2>
+<p>Pendlingen till och från länets tätorter redovisas dels övergripande per tätort och ortsklass och dels som flöden mellan tätorter i och utanför länet. Pendlingen och relationen mellan dag- och nattbefolkningen har varit en del i den grundläggande klassificeringen i ortsklasser, vilket gör att mönstret till stora delar går igenom från övriga kartor. För den övergripande pendlingen visas nettopendling per tätort som ett relativt mått. Genom att dividera dagbefolkningen (personer med arbetsplats i området) med nattbefolkningen (personer med bostad i området) och multiplicera med 100 får vi ett mått på hur relationen mellan dag och nattbefolkningen ser ut. Ett värde över 100 talar om att nettopendlingen är positiv (fler inpendlare än utpendlare). De orter som inte har en positiv nettopendling har grupperats efter om den negativa nettopendlingen är låg, medel eller hög. Ju lägre värde desto större negativ nettopendling har orten.</p>
+<div class="cr-section cr-column-screen overlay-left">
+<div class="narrative-col">
+<div class="trigger new-trigger" data-focus-on="cr-karta_nettopendl">
+<div class="narrative">
+<p><strong>Nettopendling</strong> <br> Kartan visar nettopendlingen per tätort år 2023. Det är endast ett fåtal tätorter som har ett positivt netto: Västerås, Köping, Fagersta och Strömsholm. De allra flesta orter i länet har en negativ nettopendling. De orter med en negativ nettopendling fast med ett högre värde är centralorterna Hallstahammar, Kungsör, Arboga, Sala, Skinnskatteberg och Norberg, arbetsorter intill den storregionala nodstaden samt några bostadsorter. Dessa orter har ett närmare värde till 100 till skillnad från negativ nettopendling, medel och låg. Ett lågt värde innebär störst negativ nettopendling och motsvarar här som regel bostadsorter, men innefattas även av en del serviceorter som främst ligger intill Västerås, exempelvis Barkarö och Irsta. Orterna som har en medel negativ nettopendling är relativt utspridda i länet samt varierar i ortstyp. Dessa motsvarar till största del bostadsorter samt bostadsorter med viss service, men består även av centralorten Surahammar och ett antal arbets- och serviceorter.</p>
+</div>
+</div>
+</div>
+<div class="sticky-col">
+<div class="sticky-col-stack">
+<div id="cr-karta_nettopendl" class="sticky">
+<iframe src="https://region-vastmanland.github.io/kartor/Nettopendling.html" width="250%" height="800">
+</iframe>
+</div>
+</div>
+</div>
+</div>
+<p><br> <br></p>
 </section>
 <section id="inpendling-till-tätorter-i-västmanland" class="level2">
 <h2 class="anchored" data-anchor-id="inpendling-till-tätorter-i-västmanland">Inpendling till tätorter i Västmanland</h2>
+<p>I ortstrukturen är utbytet mellan tätorterna som sker via pendling en avgörande faktor som styr graden av flerkärnighet. Under en längre tid har en regionförstoring pågått, vilket har skapat fler möjligheter att resa längre sträckor till både arbete samt bostad. Detta har även drivit utvecklingen av transportsystemet som har lett till minskade tider för resor. Pendlingen till tätorter i Västmanland ger en delvis annorlunda bild än pendlingen över kommungräns, vilket annars är den vanligaste redovisningsformen. Samtidigt som de större stråken fortfarande är enkla att urskilja så ger den högre detaljeringsgraden en annan förståelse för de dagliga flödena. När vi tittar på inpendling över tätortsgräns är det ungefär 62 000 personer som pendlar till sitt arbete från någon av länets tätorter. Av dessa är det drygt 47 500 personer som pendlar över tätortsgräns inom länet. Av dessa är det i sin tur drygt 16 500 personer som pendlar in till den storregionala nodstaden. Övergripande berör inpendlingen till stor del de större orterna och arbetsorterna. Kartbilden visar att pendlingen till arbetsplatser i Västmanland i huvudsak utgår ifrån en begränsad radie och berör de större tätorterna i de angränsande länen alternativt närliggande orter med historisk och kulturell anknytning.</p>
 <div class="cr-section cr-column-screen overlay-left">
 <div class="narrative-col">
 <div class="trigger new-trigger" data-focus-on="cr-karta7">
 <div class="narrative">
-<p>text</p>
+<p><strong>Inpendling</strong><br>De enskilt största strömmarna inom länet går till Västerås tätort. Främst från tätorterna Hallstahammar och Surahammar. Därefter till Västerås från tätorterna Köping, Sala och Skultuna. Även pendlingen från Arboga tätort till Köpings tätort är relativt stor. I den norra länsdelen är pendlingen störst mellan Norberg och Fagersta medan övriga relationer är relativt små. Kopplingen mellan norra och södra länet är även relativt svag, knappt 200 personer pendlar till exempel från tätorten Fagersta till Västerås tätort. Det här gör att det inte går att benämna länet som en enda arbetsmarknad, utan Fagerstaregionen utgör snarast en egen del jämte Västerås. Något som även framgår i den nya indelningen i funktionella arbetsmarknadsregioner (FA) som Tillväxtverket tagit fram under 2025. Västmanland består där av två FA-regioner, Västerås och Fagersta. Från tätorter utanför länet är inpendlingen störst till Västerås tätort ifrån tätorterna Stockholm, Eskilstuna och Enköping. I kartan visas endast pendlingsrelationer som består av minst tio personer.</p>
 </div>
 </div>
 </div>
@@ -436,16 +854,141 @@ Erik Johansson, utvecklingsstrateg Samhällsutveckling</code></pre>
 </div>
 </div>
 </div>
+<p><br> <br> I tabellerna redovisas den totala inpendlingen, inpendlingen mellan orterna inom länet samt från övriga riket. Tabellerna med summerade data blir ett komplement till kartbilden som visar enskilda pendlingsströmmar mellan två orter. Tabellerna ger andra perspektiv som åskådliggör både den totala inpendlingen respektive hur stor inpendlingen är både inom och utom länet för de olika ortstyperna, inklusive utanför tätort (som här även består av småorterna). Inpendlingen totalt för ortsklasserna visar att Västerås med cirka 50 procent och centralorterna med cirka 30 procent har störst inpendling. Utanför tätort (som inte syns i kartorna då det motsvarar en större geografi än en enskild punkt) motsvarar cirka 11 procent av all inpendling. Hur stor respektive liten inpendlingen för varje ortsklass är, beror även på antalet orter samt befolkning. För år 2023 har länet exempelvis mer än dubbelt så många bostadsorter än serviceorter medan dagbefolkningen (antalet sysselsatta efter arbetsställets belägenhet) är relativt lika för dem. I relation till antalet orter samt antalet dagbefolkning inom respektive ortsklass har arbetsorterna störst inpendling, vilket innebär att en större del av befolkningen som arbetar i en arbetsort kommer utifrån orten.</p>
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-4-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-4-1" role="tab" aria-controls="tabset-4-1" aria-selected="true" href="">Inpendling totalt</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-4-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-4-2" role="tab" aria-controls="tabset-4-2" aria-selected="false" href="">Inpendling inom och utom länet</a></li></ul>
+<div class="tab-content">
+<div id="tabset-4-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-4-1-tab">
+<div class="cell">
+<div class="cell-output-display">
+<table class="caption-top table table-sm table-striped small" data-quarto-postprocess="true">
+<thead>
+<tr class="header">
+<th style="text-align: left;" data-quarto-table-cell-role="th">Ortsklass</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">Inpendling totalt</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">Inpendling totalt %</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Storregional nodstad</td>
+<td style="text-align: right;">24242</td>
+<td style="text-align: right;">49</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Centralort</td>
+<td style="text-align: right;">15705</td>
+<td style="text-align: right;">31</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Utanför tätort</td>
+<td style="text-align: right;">5646</td>
+<td style="text-align: right;">11</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Arbetsort</td>
+<td style="text-align: right;">2297</td>
+<td style="text-align: right;">5</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Bostadsort</td>
+<td style="text-align: right;">940</td>
+<td style="text-align: right;">2</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Serviceort</td>
+<td style="text-align: right;">879</td>
+<td style="text-align: right;">2</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Bostadsort med viss service</td>
+<td style="text-align: right;">231</td>
+<td style="text-align: right;">0</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Totalt</td>
+<td style="text-align: right;">49940</td>
+<td style="text-align: right;">100</td>
+</tr>
+</tbody>
+</table>
+
+
+</div>
+</div>
+</div>
+<div id="tabset-4-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-4-2-tab">
+<div class="cell">
+<div class="cell-output-display">
+<table class="caption-top table table-sm table-striped small" data-quarto-postprocess="true">
+<thead>
+<tr class="header">
+<th style="text-align: left;" data-quarto-table-cell-role="th">Ortsklass</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">Inpendling övriga länet</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">Inpendling övriga riket</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Storregional nodstad</td>
+<td style="text-align: right;">16612</td>
+<td style="text-align: right;">7630</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Centralort</td>
+<td style="text-align: right;">11607</td>
+<td style="text-align: right;">4098</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Utanför tätort</td>
+<td style="text-align: right;">4349</td>
+<td style="text-align: right;">1297</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Arbetsort</td>
+<td style="text-align: right;">2047</td>
+<td style="text-align: right;">250</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Bostadsort</td>
+<td style="text-align: right;">838</td>
+<td style="text-align: right;">102</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Serviceort</td>
+<td style="text-align: right;">716</td>
+<td style="text-align: right;">163</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Bostadsort med viss service</td>
+<td style="text-align: right;">181</td>
+<td style="text-align: right;">50</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Totalt</td>
+<td style="text-align: right;">36350</td>
+<td style="text-align: right;">13590</td>
+</tr>
+</tbody>
+</table>
+
+
+</div>
+</div>
+</div>
+</div>
+</div>
 <p><br></p>
 <p><br></p>
 </section>
 <section id="utpendling-från-tätorter-i-västmanland" class="level2">
 <h2 class="anchored" data-anchor-id="utpendling-från-tätorter-i-västmanland">Utpendling från tätorter i Västmanland</h2>
+<p>Genom att studera olika pendlingsflöden från tätorterna inom länet är det möjligt att få flera perspektiv över orternas olika roller i geografin. Orter med lägre utpendling i samband med högre inpendling från andra orter har som tidigare benämnt större karaktärsdrag för arbetsmarknad samt serviceutbud. Till skillnad från bostadsorterna som med större sannolikhet har en högre utpendling kombinerat med en lägre inpendling. Alla arbets- och serviceorter kan dock inte bara ses som ett centra utan är genom utpendlingen funktionellt kopplade till större orter såsom centralorterna och storregionala nodstaden. Totalt är det knappt 68 500 personer i länet som pendlar över tätortsgräns till sitt arbete, oavsett om arbetsplatsen ligger i länet eller utanför. Innanför länets gränser är det som tidigare nämnts cirka 47 500 personer som reser över tätortsgräns. Nästan 21 000 personer pendlar alltså till en ort utanför Västmanland. Den totala utpendlingen från Västerås tätort består av drygt 19 000 personer, jämnt fördelat mellan orter i övriga länet och tätorter utanför Västmanland.</p>
 <div class="cr-section cr-column-screen overlay-left">
 <div class="narrative-col">
 <div class="trigger new-trigger" data-focus-on="cr-karta8">
 <div class="narrative">
-<p>text</p>
+<p><strong>Utpendling</strong><br>Utpendlingen från tätorter i länet följer ungefär samma mönster som inpendlingen med ett tydligt undantag. Utpendlingen från Västerås tätort till Stockholms tätort är betydligt större än inpendlingen och den överlägset största enskilda pendlingsströmmen från en enskild tätort. Utpendlingen från länet till Stockholms tätort är dock inte begränsad till Västerås, bland länets tätorter har sammanlagt 26 stycken en utpendling som är större än tio personer (Arboga, Sala och Köping har flest utpendlare till Stockholms tätort bland övriga orter). Övriga relationer med tätorter utanför länet är likartade i storlek som för inpendlingen. En annan skillnad som är synlig är utpendlingen från Norbergs tätort till Avesta tätort. Pendlingsrelationerna mellan Västmanlands norra och södra delar är dock som tidigare nämnts relativt diskreta. I kartan visas endast pendlingsrelationer som består av minst tio personer.</p>
 </div>
 </div>
 </div>
@@ -458,16 +1001,140 @@ Erik Johansson, utvecklingsstrateg Samhällsutveckling</code></pre>
 </div>
 </div>
 </div>
-<p><br></p>
-<p><br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br></p>
+<p><br> <br> I tabellerna redovisas den totala utpendlingen, utpendling mellan orterna inom länet samt till övriga riket. Tabellerna med summerade data blir ett komplement till kartbilden som visar enskilda pendlingsströmmar mellan två orter. På motsvarande sätt som för inpendlingen ger även detta ett annat perspektiv som visar både den totala inpendlingen samt hur stor utpendlingen är både inom och utom länet för de olika ortstyperna inklusive utanför tätort (som här även består av småorterna). Observera att hur stor respektive liten utpendlingen för varje ortklass är, påverkas av antalet orter samt befolkning. Här har centralorterna med 30 % som störst utpendling och därefter Västerås med 28 % och utanför tätort 22 % som har en realtivt större utpendling i förhållande till de resterande ortsklasserna. Utpendlingen för ortsklasserna inom länet är större än utpendlingen till övriga riket. Däremot har Västerås - den storregionala nodstaden nästintill lika stor utpendling inom som utom länet.</p>
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-5-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-5-1" role="tab" aria-controls="tabset-5-1" aria-selected="true" href="">Utpendling totalt</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-5-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-5-2" role="tab" aria-controls="tabset-5-2" aria-selected="false" href="">Utpendling inom och utom länet</a></li></ul>
+<div class="tab-content">
+<div id="tabset-5-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-5-1-tab">
+<div class="cell">
+<div class="cell-output-display">
+<table class="caption-top table table-sm table-striped small" data-quarto-postprocess="true">
+<thead>
+<tr class="header">
+<th style="text-align: left;" data-quarto-table-cell-role="th">Ortsklass</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">Utpendling totalt</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">Utpendling totalt %</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Centralort</td>
+<td style="text-align: right;">20406</td>
+<td style="text-align: right;">30</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Storregional nodstad</td>
+<td style="text-align: right;">19363</td>
+<td style="text-align: right;">28</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Utanför tätort</td>
+<td style="text-align: right;">15008</td>
+<td style="text-align: right;">22</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Bostadsort</td>
+<td style="text-align: right;">4841</td>
+<td style="text-align: right;">7</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Arbetsort</td>
+<td style="text-align: right;">4206</td>
+<td style="text-align: right;">6</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Serviceort</td>
+<td style="text-align: right;">3982</td>
+<td style="text-align: right;">6</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Bostadsort med viss service</td>
+<td style="text-align: right;">569</td>
+<td style="text-align: right;">1</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Totalsumma</td>
+<td style="text-align: right;">68375</td>
+<td style="text-align: right;">100</td>
+</tr>
+</tbody>
+</table>
+
+
+</div>
+</div>
+</div>
+<div id="tabset-5-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-5-2-tab">
+<div class="cell">
+<div class="cell-output-display">
+<table class="caption-top table table-sm table-striped small" data-quarto-postprocess="true">
+<thead>
+<tr class="header">
+<th style="text-align: left;" data-quarto-table-cell-role="th">Ortsklass</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">Utpendling övriga länet</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">Utpendling övriga riket</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Centralort</td>
+<td style="text-align: right;">14481</td>
+<td style="text-align: right;">5925</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Storregional nodstad</td>
+<td style="text-align: right;">9706</td>
+<td style="text-align: right;">9657</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Utanför tätort</td>
+<td style="text-align: right;">11916</td>
+<td style="text-align: right;">3092</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Bostadsort</td>
+<td style="text-align: right;">4061</td>
+<td style="text-align: right;">780</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Arbetsort</td>
+<td style="text-align: right;">3673</td>
+<td style="text-align: right;">533</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Serviceort</td>
+<td style="text-align: right;">3223</td>
+<td style="text-align: right;">759</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Bostadsort med viss service</td>
+<td style="text-align: right;">429</td>
+<td style="text-align: right;">140</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Totalsumma</td>
+<td style="text-align: right;">47489</td>
+<td style="text-align: right;">20886</td>
+</tr>
+</tbody>
+</table>
+
+
+</div>
+</div>
+</div>
+</div>
+</div>
+<p><br> <br></p>
 </section>
-<section id="tillgänglighetsindex" class="level2">
-<h2 class="anchored" data-anchor-id="tillgänglighetsindex">Tillgänglighetsindex</h2>
+<section id="tillganglighet" class="level2">
+<h2 class="anchored" data-anchor-id="tillganglighet">Tillgänglighetsindex</h2>
+<p>Tillgängligheten till olika servicefunktioner i Västmanland skiljer sig åt beroende på orternas geografiska läge, demografiska faktorer samt tillgången till transport. I en geografisk kontext påverkas tillgängligheten beroende på hur avlägsen en ort är från till exempel större servicecentrum i förhållande till hur väl utbyggd infrastrukturen är. Befolkningsstrukturen är ytterligare en faktor eftersom orter med fler äldre och yngre har ett större behov av närliggande service. Transportmöjligheterna är avgörande särskilt vad gäller mer perifera delar av länet. Genom Tillväxtverkets beteendemodell för samtliga färdsätt i Pipos Regionalanalys har vi nedan använt tillgänglighetsindex för att kunna jämföra geografisk tillgänglighet mellan orterna för år 2023. Indexet beräknar tillgängligheten baserat på olika reseandledningars sammanvägda utbud. Tillgänglighetsindexet kan både användas för att urskilja tillgängligheten till olika servicefunktioner i länet men även tillgängligheten och utbytet mellan tätorterna.</p>
 <div class="cr-section cr-column-screen overlay-left">
 <div class="narrative-col">
 <div class="trigger new-trigger" data-focus-on="cr-karta9">
 <div class="narrative">
-<p>text</p>
+<p><strong>Tillgänglighetsindex</strong><br>Tillgänglighetsindexet visar i allmänhet att tillgänglighetens radie främst är större i de södra lokaliserade orterna. I kartan synliggörs att den storregionala nodstaden generellt har mycket hög tillgänglighet, även de omrkingliggande serviceorterna och ett antal arbets- samt bostadsorter. De allra flesta centralorterna i länet har en högre tillgänglighet till servicefunktioner, vilket beror på en högre koncentration av invånare, mer välutvecklad infrastruktur, bättre ekonomiska förutsättningar och andra sammanhängande faktorer. Tillgängligheten är lägre vid utkanten av kommunernas gränser samt i de norra delarna av länet. En mer sammanhängande tillgänglighet syns i de mer södra delarna upp mot Surahammar, medan för de norra delarna visas fler skillnader inom tillgänglighetsindexet. Till exempel centralorterna Sala och Fagersta som har en hög tillgänglighet, medan Norberg har medel och Skinnskatteberg låg. Denna skillnad visas även för de närliggande arbets-, service och bostadsorter med viss service. För länet som helhet innebär dock inte detta att tillgängligheten är bristfällig utan att det finns orter och områden med mer omfattande utmaningar. Gränserna för nivåerna går från cirka 33 till 48 (<em>låg</em>), 50 till 66 (<em>medel</em>), 68 till 79 (<em>hög</em>) och 80 till 89 (<em>mycket hög</em>).</p>
 </div>
 </div>
 </div>
@@ -481,14 +1148,96 @@ Erik Johansson, utvecklingsstrateg Samhällsutveckling</code></pre>
 </div>
 </div>
 <p><br></p>
-<p><br> <br></p>
+</section>
+<section id="urban-rural-typologi-i-samband-med-ortstrukturen" class="level2">
+<h2 class="anchored" data-anchor-id="urban-rural-typologi-i-samband-med-ortstrukturen">Urban-rural typologi i samband med ortstrukturen</h2>
+<p>För att ytterligare analysera orternas geografiska förutsättningar och funktionella samband i Västmanland har vi satt ortstrukturen i anknytning till Nordregios karta som illustrerar typologin för stad och landsbygd på rutnätsnivå. Kartan har en klassificering av områden i länet utifrån dess urbana eller mer glesbygda karaktär som bidrar till en ökad förståelse för de demografiska trenderna för orterna samt i relation till orternas omland. De sju klassificeringarna har definierats enligt Nordregio utifrån befolkningstäthet och tillgänglighetsmått inklusive marktäckesparametrar. Analysen på tätortsnivå kan exempelvis påvisa att tillväxten är stor i enbart ortens stadsområde samtidigt som de mer perifera delarna utvecklas i en långsammare takt.</p>
+<div class="cr-section cr-column-screen overlay-left">
+<div class="narrative-col">
+<div class="trigger new-trigger" data-focus-on="cr-kartanordr">
+<div class="narrative">
+<p><strong>Urban-rural typologi</strong><br>I kartan syns dels den klassificering i ortstyper vi tagit fram för den här rapporten och som bakgrundskarta har vi lagt in Nordregios kartläggning av de nordiska länderna i en så kallad ny urban-rural typologi. Det är en rutnätsbaserad klassificering där alla sju befintliga områdestyper i klassificeringen finns representerade inom länet, från de centrala, urbana områdena till glest befolkade rurala områden. Utifrån den här klassificeringen ser vi ett ganska tydligt band som sträcker sig från norra delarna av Uppsala län till Örebro län, med rurala och peri-urbana områden i omedelbar närhet till urbana områden och innerstäderna. Här synliggörs att Västerås och Köping utgör länets tydliga urbana centran. De övriga centralorterna i länets kommuner klassificeras som lokala centran i rurala områden. Kartan visar även att Fagersta och Skinnskatteberg är de orter som befinner sig längst ifrån peri-urbana områden, vilket innebär att orternas omland är mer ruralt än stadsnära. Skinnskatteberg har stora delar glest befolkade rurala områden, som i sin tur ingår i ett större område som sträcker sig mot Smedjebacken och Lindesberg. I norra delen av länet blir det också tydligt att Norberg även utgör en naturlig del av Avestas omland, som i den här klassificeringen sträcker sig långt in i Norbergs kommun.</p>
+</div>
+</div>
+</div>
+<div class="sticky-col">
+<div class="sticky-col-stack">
+<div id="cr-kartanordr" class="sticky">
+<iframe src="https://region-vastmanland.github.io/kartor/Ortstruktur_nordregio.html" width="225%" height="800">
+</iframe>
+</div>
+</div>
+</div>
+</div>
+<p><br></p>
+</section>
+<section id="slutsats" class="level2">
+<h2 class="anchored" data-anchor-id="slutsats">Sammanfattande slutsatser</h2>
+<p>Ortstrukturen för Västmanlands län beskriver orternas roll i den regionala geografin och hur de förhåller sig till varandra utifrån storlek, funktioner, geografiskt läge och nivå av utbyte mellan orterna (hur de är sammankopplade via pendling och flyttningar). Länet består totalt av tio centralorter, 34 tätorter, 62 småorter samt övrig landsbygd. Västmanland har en tätortsgrad på 88 %, vilket innebär att en mycket stor del av befolkningen är bosatta i någon av tätorterna. Närmre hälften av länets befolkning bor i den storregionala nodstaden Västerås som tillsammans med centralorterna Köping och Sala utgör de mest befolkade orterna i länet. Utvecklingen mellan 2013 och 2023 visar att antalet orter ökat från 95 till 119. Framför allt har småorter samt nya bostadsorter och serviceorter tillkommit. Orterna varierar i karaktär - vissa domineras av arbetstillfällen och serviceutbud, medan andra främst har rollen som bostadsorter, ofta med hög utpendling. Utöver storlek och funktion påverkas graden av integration mellan orterna av infrastruktur, restider och geografiska avstånd. Ortstrukturen visar även på förhållandet mellan större urbana områden och mindre rurala områden. Ju större huvudorten i kommunen är, desto bredare är ofta dess funktionella geografi: sambandet mellan orternas storlek, natt/dag-befolkning, försörjningskvot och attraktionskraft gentemot omgivande orter. Orternas självständighet kan förklaras genom tillgången till ett större funktionellt sammanhang. Större orter fungerar som nav för arbete och service, vilket gör mindre orter och landsbygd beroende av dem. Samtidigt finns mindre orter belägna i de mer perifera delarna av länet som har en högre självständighet trots en mindre integration till andra omgivande orter. <br></p>
+<p>Kategoriseringen av orterna bygger på den tidigare nämnda metoden och datainsamlingen. I diagrammet nedan visas en samlad bild för relationen mellan inpendlande dagbefolkning och utpendlande nattbefolkning. Pendlingen spelar en central roll i beskrivningen av ortstrukturen och utfallet i diagrammet återspeglar till stor del att andelen in- respektive utpendlare utgjort en del i klassificeringen av ortstyper. Detta illustreras tydligast i kvadranten för “utpräglade bostadsorter”. Diagrammet visar också att vi har få “utpräglade arbetsorter”, vilket är en reflektion av länets specifika geografi, de orter som befinner sig i den kvadranten har alla relativt långt till närliggande orter. Andra arbetsorter i länet har en relativ närhet till Västerås och Köping, vilket genererar en större rörlighet åt båda håll. Utifrån klassificeringen är det egentligen bara Skultuna som stämmer överens med beskrivningen. Övriga arbetsorter i länet hamnar antingen i “hög rörlighet” eller “sjävständiga boende- och orter”. I kvadranten för “självständiga boende- och arbetsorter” återfinner vi länets samtliga centralorter samt ett par orter som närmar sig mönstret, eller kanske snarare varit där tidigare, exempelvis Virsbo och Kolsva. Att Möklinta tar plats här avser snarare att orten är relativt geografiskt otillgänglig (i liknande situation som Salbohed, Västerfärnebo och Riddarhyttan). Kännetecknande för orterna med “hög rörlighet” är en relativt gynnsam geografi, ofta relativt nära Västerås och tillräckligt stora för att även generera inpendling, främst kopplat till utbildnings- och tjänstesektorn. <br> <br></p>
+</section>
+</div>
+<p><img src="pendlingsbild.png" class="img-fluid"></p>
+<div class="{closeread-narrative}">
+<p>Gällande den förvärvsarbetande natt- och dagbefolkningen syns en stark tillväxt för båda grupperna i den storregionala nodstaden och i omkringliggande orter, samt i vissa centralorter och arbetsorter. Flera serviceorter nära Västerås har haft en ökning i både natt- och dagbefolkning, vilket återspeglar en lokal tillväxt av både bostäder och arbetstillfällen. Däremot finns det orter där utvecklingen av dag- och nattbefolkningen istället pekar mot ett beroende av omgivande orter och en svagare lokal arbetsmarknad. Befolknings- och flyttmönstret visar att befolkningen främst ökat i tätorter nära de större orterna, särskilt i de södra och sydöstra delarna av länet. Samtidigt minskar befolkningen i flera av de mer perifera västra och särskilt nordvästra delarna av länet. Den storregionala nodstaden attraherar fler invånare från såväl länet som övriga Sverige, medan många mindre orter har ett negativt flyttnetto och en demografiskt ogynnsam utveckling. I förlängningen kan det leda till en försämrad lokal försörjningskapacitet. Ett sätt att följa den utvecklingen är genom den demografiska försörjningskvoten. Försörjningskvoten är generellt lägre i större orter, där det finns fler arbetstillfällen och människor i arbetsför ålder, medan mindre och mer perifera orter ofta har en högre kvot. Mellanstora orter som fungerar som noder i sin geografi kan temporärt hålla nere kvoten genom att attrahera arbetsför befolkning från omkringliggande områden.</p>
+<p>Pendling och arbetstillfällen är en viktig del i att förstå ortstrukturen, men för att fånga in även andra aspekter är det intressant att titta på hur tillgängligheten ser ut i länets tätorter. Restid är en viktig sådan aspekt, som är svårmätt då vi har olika syn på vad som är en acceptabel restid beroende på vilket syfte resan har. Genom att använda Tillväxtverkets index för tillgänglighet som baseras på en modell som förutsätter att människor vid varje givet tillfälle väljer det mest rationella transportsättet för den restyp (arbete, studier, inköp etc) som ska göras kan vi få ett mått på den samlade tillgängligheten. I diagrammet nedan visas en bild för hur befolkningsförändringen mellan 2013-2023 och tillgängligheten för länets tätorter förhåller sig till varandra. En ort kan ha hög eller låg tillgänglighet i kombination med befolkningsminskning eller befolkningstillväxt. Här finns ett samband mellan hög tillgänglighet och befolkningstillväxt, men det är långtifrån entydigt då flera andra orsaker också påverkar befolkningstillväxten, som till exempel bostadsbyggande, åldersstruktur och arbetsmarknad.<br>
+<br> <br></p>
+<p><img src="tillgangl_befolkn.png" class="img-fluid"></p>
+<p>Tillgängligheten till servicefunktioner i länet varierar alltså mellan olika orter, beroende på geografiskt läge och infrastruktur. I de mer glesare och perifera delarna av länet visas en lägre tillgänglighet till service medan tillgängligheten generellt är hög i större orter, särskilt i de södra delarna. Median för tillväxtindex för tätorter ligger strax över 70 på den hundragradiga skalan och som vi ser finns det flera orter där tillgänglighetsindex ligger runt 90. Ett tydligt mönster ses bland orter med lägre tillgänglighet (under 60): utöver centralorten Skinnskatteberg hittar vi serviceorter och bostadsorter med utökad service. Orternas utvecklingsförutsättning här är ett utökat lokalt utbud av grundläggande service.<br>
+De orter som sticker ut på axeln över befolkningsförändringen kännetecknas av ett stort tillskott av nya bostäder, utökad kommunal service och att de uppnått tätortsstatus under den studerade perioden (därav folkökning med 100 procent). Alla orter ingår i olika sammanhang, såväl som länet ingår i ett större funktionellt sammanhang. Sammantaget har orterna i länet varierande roller i den regionala geografin, olika behov samt utvecklingsförutsättningar. Sambanden och ortstrukturens utveckling är ständigt under förändring och kan gå i varierad takt i olika delar av länet, antingen mot en mer sammanhängande eller mindre sammanhängande struktur. <br> <br></p>
+<section id="Vagen" class="level2">
+<h2 class="anchored" data-anchor-id="Vagen">Vägen framåt - varför kunskap om ortstrukturen är viktig</h2>
+<p>Studien av ortstrukturen i Västmanlands län ger en viktig grund för att förstå hur länet fungerar som helhet – både socialt, ekonomiskt och geografiskt. Genom att kartlägga befolkningens fördelning, pendlingsmönster och orternas funktioner får vi insikter som är avgörande för planering och utveckling. Denna kunskap är central för att kunna fatta välgrundade beslut inom samhällsplanering, infrastruktur, kollektivtrafik, bostadsbyggande och näringslivsutveckling. Den hjälper till att identifiera var det finns potential för tillväxt, var det behövs insatser för att stärka lokal service, och hur regionen kan främja ett mer sammanhängande län.</p>
+<p>Att ta detta arbete vidare innebär att vi fortsätter att analysera och uppdatera vår förståelse för orternas roller och relationer. Det kräver samverkan mellan kommuner, regionen och andra aktörer samt att vi integrerar denna kunskap i strategiska dokument och praktisk planering. Genom att bygga vidare på denna studie kan det skapas bättre förutsättningar för att fortsätta bygga ett Västmanland där människor vill bo, arbeta och leva. <br> <br></p>
 </section>
 <section id="referenser" class="level2">
 <h2 class="anchored" data-anchor-id="referenser">Referenser</h2>
-<p><br> SCB (2024). <em>Tätorter i Sverige</em>. https://www.scb.se/hitta-statistik/sverige-i-siffror/miljo/tatorter-i-sverige/ <br> <br> Region Västmanland (2025). <em>Regional systemanalys för Västmanland</em>. https://regionvastmanland.se/utveckling/samhallsutveckling/transportinfrastruktur/webbrapport-systemanalys/<br>
-<br> Adolphson, M &amp; Johansson, M. (2006). <em>Polycentrism, Monocentrism och Regionförstoring, alternativa och/eller komplementära utvecklingsförlopp</em>. Stockholm: KTH.</p>
+<p><br> Adolphson, M &amp; Johansson, M. (2006). <em>Polycentrism, Monocentrism och Regionförstoring, alternativa och/eller komplementära utvecklingsförlopp</em>. Stockholm: KTH. <br> <br> Boverket (2024). <em>Bostadsmarknadsanalys 2024 Västmanlands län</em>. <br> <br> Mälardalsrådet (2015). <em>Flerkärnighet och funktionella samband i östra Mellansverige</em>. https://www.malardalsradet.se/wp-content/uploads/2017/03/flerka%CC%88rnighet-och-funktionella-samband-i-o%CC%88stra-mellansverige.pdf <br> <br> Nordregio (2023). <em>Ny typologi för de nordiska länderna mellan stad och landsbygd</em>. https://nordregio.org/maps/new-urban-rural-typology-of-nordic-countries/</p>
+<p><br> Regionsamverkan Sydsverige (2023). <em>Ortsstrukturer och funktionella samband i Södra Sverige</em> https://storymaps.arcgis.com/collections/b7b8da2a9079409a8aa985ac7334300a?item=1</p>
+<p><br> Region Västmanland (2025). <em>Regional systemanalys för Västmanland</em>. https://regionvastmanland.se/utveckling/samhallsutveckling/transportinfrastruktur/webbrapport-systemanalys/</p>
+<p><br> SCB (2024). <em>Tätorter i Sverige</em>. https://www.scb.se/hitta-statistik/sverige-i-siffror/miljo/tatorter-i-sverige/ <br> <br> SCB (2023). <em>Ökad andel boende i tätorter och småorter 2023</em>. <a href="https://www.scb.se/hitta-statistik/statistik-efter-amne/boende-bebyggelse-och-mark/bebyggelseomraden/tatorter-och-smaorter/pong/statistiknyhet/tatorter-och-smaorter-2023/">Ökad andel boende i tätorter och småorter 2023</a></p>
+<p><br> Tillväxtverket (2025). <em>Beräkningsmodeller för tillgänglighet</em>. https://pipos.se/vara-tjanster/regionalanalys/data-och-metoder-i-regionalanalys/berakningsmodeller-for-tillganglighet</p>
 <p><br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br></p>
+<div class="{=html}">
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+  const navbarHeight = 56; // justera till din navbar-höjd i px
+  document.querySelectorAll(".navbar a").forEach(link => {
+    link.addEventListener("click", function(e) {
+      e.preventDefault();
+      const targetId = this.getAttribute("href").substring(1);
+      const target = document.getElementById(targetId);
+      if(target) {
+        const y = target.getBoundingClientRect().top + window.scrollY - navbarHeight;
+        window.scrollTo({ top: y, behavior: 'smooth' });
+      }
+    });
+  });
+});
+</script>
+<script>
+
+document.addEventListener("DOMContentLoaded", function() {
+  const navbarLinks = document.querySelectorAll(".navbar a");
+  const sections = Array.from(navbarLinks).map(link => document.querySelector(link.getAttribute("href")));
+
+  function highlightCurrent() {
+    const scrollPos = window.scrollY + 60; // justera för navbar-höjd
+    sections.forEach((section, i) => {
+      if(section.offsetTop <= scrollPos && (section.offsetTop + section.offsetHeight) > scrollPos) {
+        navbarLinks.forEach(link => link.classList.remove("active"));
+        navbarLinks[i].classList.add("active");
+      }
+    });
+  }
+
+  window.addEventListener("scroll", highlightCurrent);
+  highlightCurrent();
+});
+</script>
+</div>
 </section>
+</div>
 
 </main>
 <!-- /main column -->
