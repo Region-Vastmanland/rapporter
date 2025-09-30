@@ -1,0 +1,85 @@
+/* ===========================
+   Tvinga Calibri via root-variabler
+=========================== */
+:root {
+  --reveal-font-family: "Calibri", sans-serif;
+  --reveal-font-family-header: "Calibri", sans-serif;
+}
+
+/* ===========================
+   Rubriker
+=========================== */
+.reveal .slides h1 {
+  font-size: 72px;
+  color: #670F3B;
+}
+
+.reveal .slides h2 {
+  font-size: 48px;
+  color: #670F3B;
+}
+
+.reveal .slides h3 {
+  font-size: 32px;
+  color: #670F3B;
+}
+
+/* ===========================
+   Brödtext
+=========================== */
+.reveal .slides p {
+  font-size: 22px;
+  color: #670F3B;
+  line-height: 1.4;
+}
+
+/* ===========================
+   Listor
+=========================== */
+.reveal .slides ul,
+.reveal .slides ol {
+  font-size: 22px;
+  color: #670F3B;
+}
+
+/* ===========================
+   Logotyp i nedre högra hörnet
+=========================== */
+.reveal .slide-background::after {
+  content: "";
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  width: 120px;  /* justera storlek */
+  height: 50px;  /* justera storlek */
+  background-image: url("logo.png"); /* byt till din logotyp */
+  background-size: contain;
+  background-repeat: no-repeat;
+  opacity: 0.9;
+  pointer-events: none;
+}
+
+/* ===========================
+   Bakgrundsfärg
+=========================== */
+.reveal .slide-background {
+  background-color: #F4DEE6;
+}
+
+
+/* Logotyp i nedre högra hörnet */
+.reveal .slide-background::after {
+  content: "";
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  width: 160px;
+  height: 90px;
+  background-image: url("RV_logo_primar_RGB.PNG"); /* byt till din fil */
+  background-size: contain;
+  background-repeat: no-repeat;
+  opacity: 0.9;
+  pointer-events: none;
+}
+
+
