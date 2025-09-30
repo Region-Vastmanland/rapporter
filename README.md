@@ -8,3 +8,6 @@ Rapport RV001 (2025) Författare: Julia Wikgren
 
 [Ortstruktur](https://region-vastmanland.github.io/rapporter/Ortsstruktur.html) 
 Ortstruktur (2025) Författare: Julia Wikgren, Erik Johansson & Magnus Forslund 
+
+[Ortstruktur kartor ](https://region-vastmanland.github.io/rapporter/Kartpresentation.html)
+Kartorna från rapporten
