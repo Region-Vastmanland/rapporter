@@ -9,5 +9,4 @@ Rapport RV001 (2025) Författare: Julia Wikgren
 [Ortstruktur](https://region-vastmanland.github.io/rapporter/Ortsstruktur.html) 
 Praktikarbete (2025) Författare: Julia Wikgren, Erik Johansson & Magnus Forslund 
 
-[Tillväxtförutsättningar i Västmanland](https://region-vastmanland.github.io/rapporter/Tillvaxt_ny.html) 
-Rapport RV002 (2025) Författare: Magnus Forslund 
+
