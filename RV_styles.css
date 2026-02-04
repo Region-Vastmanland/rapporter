@@ -100,3 +100,59 @@ p {
   font-weight: bold; /* Gör aktiv flik fet */
 }
 
+#flikrad {
+  margin-top: 1em;
+  padding: 0.5em 0;
+  background-color: #f8f9fa;
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+  display: flex;
+  justify-content: center;
+  gap: 2em;
+  flex-wrap: wrap;
+}
+
+#flikrad a {
+  font-weight: 600;
+  color: rgb(122, 137, 72);
+  text-decoration: none;
+  padding: 0.3em 0.5em;
+  border-radius: 4px;
+}
+
+#flikrad a:hover {
+  background-color: #e0e0e0;
+}
+
+
+}
+
+/* Desktop: klassisk sidopanel */
+@media (min-width: 769px) {
+  #TOC {
+    position: fixed;
+    left: 1rem;
+    top: 5rem;
+    width: 250px;
+    max-height: 80vh;
+    overflow-y: auto;
+  }
+
+  main {
+    margin-left: 280px;
+  }
+}
+
+/* Mobil: TOC överst i flödet */
+@media (max-width: 768px) {
+  #TOC {
+    position: relative;
+    width: 100%;
+    margin-bottom: 1rem;
+    max-height: none;
+  }
+
+  main {
+    margin-left: 0;
+  }
+}
