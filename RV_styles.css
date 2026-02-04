@@ -127,29 +127,34 @@ p {
 
 }
 
-/* Desktop: klassisk sidopanel */
+/* Desktop: TOC som sidopanel */
 @media (min-width: 769px) {
   #TOC {
-    position: fixed;
-    left: 1rem;
-    top: 5rem;
+    float: left;
     width: 250px;
     max-height: 80vh;
     overflow-y: auto;
+    margin-right: 1rem;
+    border: 1px solid #ddd;
+    padding: 0.5rem;
+    background: #f9f9f9;
   }
 
   main {
-    margin-left: 280px;
+    margin-left: 260px; /* ger plats för sidopanelen */
   }
 }
 
 /* Mobil: TOC överst i flödet */
 @media (max-width: 768px) {
   #TOC {
-    position: relative;
     width: 100%;
     margin-bottom: 1rem;
+    float: none;
     max-height: none;
+    border: 1px solid #ddd;
+    padding: 0.5rem;
+    background: #f9f9f9;
   }
 
   main {
