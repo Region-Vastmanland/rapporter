@@ -6,7 +6,6 @@ body {
   line-height: 1.5;
   background-color: white;
 }
-
 /* Rubriker */
 h1, h2, h3 {
   color: #670F3B;
@@ -14,7 +13,6 @@ h1, h2, h3 {
   margin-top: 1.2em;
   margin-bottom: 0.6em;
 }
-
 /* Länkar */
 a {
   color: #007acc;
@@ -23,14 +21,12 @@ a {
 a:hover {
   text-decoration: underline;
 }
-
 /* Tabeller - minimalistisk stil */
 table {
   width: 100%;
   border-collapse: collapse;
   margin: 1em 0;
 }
-
 table th {
   font-weight: bold;
   background-color: #c0e7ed;
@@ -38,35 +34,26 @@ table th {
   text-align: left;
   border: none;
 }
-
 table td {
   padding: 8px 12px;
   border: none;
 }
-
 table tr:nth-child(even) td {
   background-color: #ffffff;
 }
-
 table tr:nth-child(odd) td {
   background-color: #ffffff;
 }
-
-
 clean-table tr:nth-child(even) {
   background-color: white !important;
 }
-
 quarto-title-author {
   text-align: center;
 }
-
 /* Marginaler */
 p {
   margin-bottom: 1em;
 }
-
-
 .title-authors code {
    font-family: Calibri, 'Carlito', Arial, sans-serif !important;
   color: #666 !important;
@@ -76,30 +63,25 @@ p {
   margin-top: 0.5em;
   text-align: center;
 }
-
 .kommentar {
   font-size: 0.85em;
   color: #555;
   margin-top: 0.5em;
   font-style: italic;
 }
-
 .panel-tabset table {
   width: 400px !important;
   background-color: white;
   margin-left: 0;
 }
-
 .panel-tabset .nav-tabs .nav-link {
   color: #333333;            /* Färg på flikrubriken (inte vald) */
 }
-
 .panel-tabset .nav-tabs .nav-link.active {
   color: #670F3B;            /* Färg på aktiv flik */
   background-color: #ffffff; /* Bakgrundsfärg på aktiv flik */
   font-weight: bold; /* Gör aktiv flik fet */
 }
-
 #flikrad {
   margin-top: 1em;
   padding: 0.5em 0;
@@ -111,7 +93,6 @@ p {
   gap: 2em;
   flex-wrap: wrap;
 }
-
 #flikrad a {
   font-weight: 600;
   color: rgb(122, 137, 72);
@@ -119,45 +100,38 @@ p {
   padding: 0.3em 0.5em;
   border-radius: 4px;
 }
-
 #flikrad a:hover {
   background-color: #e0e0e0;
 }
+/* <-- TA BORT den extra } som var här */
 
-
-}
-
-/* Desktop: TOC som sidopanel */
-@media (min-width: 769px) {
+/* Tvinga TOC att visas på mobil */
+@media (max-width: 991px) {
+  #quarto-margin-sidebar {
+    display: block !important;
+    position: static !important;
+    width: 100% !important;
+    margin-bottom: 2rem;
+    border: 1px solid #dee2e6;
+    padding: 1rem;
+    background: #f8f9fa;
+  }
+  
+  .sidebar-navigation {
+    display: block !important;
+  }
+  
+  nav[role="doc-toc"] {
+    display: block !important;
+  }
+  
   #TOC {
-    float: left;
-    width: 250px;
-    max-height: 80vh;
-    overflow-y: auto;
-    margin-right: 1rem;
-    border: 1px solid #ddd;
-    padding: 0.5rem;
-    background: #f9f9f9;
-  }
-
-  main {
-    margin-left: 260px; /* ger plats för sidopanelen */
+    display: block !important;
   }
 }
-
-/* Mobil: TOC överst i flödet */
-@media (max-width: 768px) {
-  #TOC {
-    width: 100%;
-    margin-bottom: 1rem;
-    float: none;
-    max-height: none;
-    border: 1px solid #ddd;
-    padding: 0.5rem;
-    background: #f9f9f9;
-  }
-
-  main {
-    margin-left: 0;
+/* Behåll normal sidebar på desktop */
+@media (min-width: 992px) {
+  #quarto-margin-sidebar {
+    display: block;
   }
 }
