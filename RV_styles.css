@@ -103,16 +103,20 @@ p {
 #flikrad a:hover {
   background-color: #e0e0e0;
 }
-/* Desktop: normal sidebar till vänster */
+/* Desktop: normal sidebar */
 @media (min-width: 992px) {
-  #TOC {
-    /* Ta bort fixed positioning, använd Quartos default */
+  #mobile-toc {
+    display: none !important;
   }
 }
 
-/* Mobil: visa TOC i början av dokumentet */
+/* Mobil: dölj original TOC, visa vår egna */
 @media (max-width: 991px) {
-  #TOC {
+  #quarto-margin-sidebar {
+    display: none !important;
+  }
+  
+  #mobile-toc {
     display: block !important;
     background: #f8f9fa;
     border: 1px solid #dee2e6;
@@ -121,14 +125,38 @@ p {
     border-radius: 4px;
   }
   
-  nav[role="doc-toc"] ul {
-    list-style: none;
-    padding-left: 1em;
+  #mobile-toc h3 {
+    margin-top: 0;
+    color: #670F3B;
+    font-size: 1.1em;
+    margin-bottom: 0.8em;
   }
   
-  nav[role="doc-toc"] a {
-    color: #007acc;
+  #mobile-toc ul {
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+  }
+  
+  #mobile-toc li {
+    margin: 0.3em 0;
+  }
+  
+  #mobile-toc a {
     display: block;
-    padding: 0.3em 0;
+    padding: 0.5em;
+    color: #007acc;
+    text-decoration: none;
+    background: white;
+    border-radius: 4px;
+  }
+  
+  #mobile-toc a:hover {
+    background: #e9ecef;
+  }
+  
+  #mobile-toc .toc-level-2 {
+    padding-left: 1.5em;
+    font-size: 0.95em;
   }
 }
