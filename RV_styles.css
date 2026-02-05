@@ -103,58 +103,32 @@ p {
 #flikrad a:hover {
   background-color: #e0e0e0;
 }
-/* Tvinga TOC att visas på mobil */
-@media (max-width: 991px) {
-  #quarto-margin-sidebar {
-    display: block !important;
-    position: static !important;
-    width: 100% !important;
-    margin-bottom: 2rem;
-    border: 1px solid #dee2e6;
-    padding: 1rem;
-    background: #f8f9fa;
-  }
-  
-  .sidebar-navigation {
-    display: block !important;
-  }
-  
-  nav[role="doc-toc"] {
-    display: block !important;
-  }
-  
+/* Desktop: normal sidebar till vänster */
+@media (min-width: 992px) {
   #TOC {
-    display: block !important;
-  }
-  
-  /* Gör TOC-länkar synliga och klickbara */
-  #TOC ul {
-    list-style: none;
-    padding-left: 0;
-  }
-  
-  #TOC li {
-    margin: 0.5em 0;
-  }
-  
-  #TOC a {
-    display: block;
-    padding: 0.5em;
-    color: #007acc;
-    text-decoration: none;
-    background: white;
-    border-radius: 4px;
-  }
-  
-  #TOC a:hover {
-    background: #e9ecef;
-    text-decoration: none;
+    /* Ta bort fixed positioning, använd Quartos default */
   }
 }
 
-/* Behåll normal sidebar på desktop */
-@media (min-width: 992px) {
-  #quarto-margin-sidebar {
+/* Mobil: visa TOC i början av dokumentet */
+@media (max-width: 991px) {
+  #TOC {
+    display: block !important;
+    background: #f8f9fa;
+    border: 1px solid #dee2e6;
+    padding: 1rem;
+    margin-bottom: 2rem;
+    border-radius: 4px;
+  }
+  
+  nav[role="doc-toc"] ul {
+    list-style: none;
+    padding-left: 1em;
+  }
+  
+  nav[role="doc-toc"] a {
+    color: #007acc;
     display: block;
+    padding: 0.3em 0;
   }
 }
