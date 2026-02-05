@@ -103,8 +103,6 @@ p {
 #flikrad a:hover {
   background-color: #e0e0e0;
 }
-/* <-- TA BORT den extra } som var här */
-
 /* Tvinga TOC att visas på mobil */
 @media (max-width: 991px) {
   #quarto-margin-sidebar {
@@ -128,7 +126,32 @@ p {
   #TOC {
     display: block !important;
   }
+  
+  /* Gör TOC-länkar synliga och klickbara */
+  #TOC ul {
+    list-style: none;
+    padding-left: 0;
+  }
+  
+  #TOC li {
+    margin: 0.5em 0;
+  }
+  
+  #TOC a {
+    display: block;
+    padding: 0.5em;
+    color: #007acc;
+    text-decoration: none;
+    background: white;
+    border-radius: 4px;
+  }
+  
+  #TOC a:hover {
+    background: #e9ecef;
+    text-decoration: none;
+  }
 }
+
 /* Behåll normal sidebar på desktop */
 @media (min-width: 992px) {
   #quarto-margin-sidebar {
