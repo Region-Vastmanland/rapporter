@@ -11,3 +11,6 @@ Praktikarbete (2025) Författare: Julia Wikgren, Erik Johansson & Magnus Forslun
 
 [Tillväxtförutsättningar i Västmanland](https://region-vastmanland.github.io/rapporter/Tillvaxt_2026.html) 
 Rapport (2026) Författare: Magnus Forslund 
+
+[Tillväxtmöjligheter för Västmanlands län](https://region-vastmanland.github.io/rapporter/Tillvaxtmojligheter.html)
+Rapport (2026) Författare: Magnus Forslund, Erik Asph Hennerdal
