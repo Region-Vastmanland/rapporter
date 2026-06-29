@@ -17,3 +17,5 @@ Rapport (2026) Författare: Magnus Forslund, Erik Asph Hennerdal
 
 [Uppföljning av indikatorer i den regionala utvecklingsstrategin](https://region-vastmanland.github.io/rapporter/rapport_all.html)
 Rapport (2026) Författare: Magnus Forslund
+
+[UTKAST Befolkningsframskrivning Västmanland](https://region-vastmanland.github.io/rapporter/Befolkningsframskrivning_rapport.html)
