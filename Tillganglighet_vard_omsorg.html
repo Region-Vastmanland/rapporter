@@ -1,0 +1,770 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.4.555">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Tillgänglighet till vård och omsorg Västmanland</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="Tillganglighet_vard_omsorg_files/libs/clipboard/clipboard.min.js"></script>
+<script src="Tillganglighet_vard_omsorg_files/libs/quarto-html/quarto.js"></script>
+<script src="Tillganglighet_vard_omsorg_files/libs/quarto-html/popper.min.js"></script>
+<script src="Tillganglighet_vard_omsorg_files/libs/quarto-html/tippy.umd.min.js"></script>
+<script src="Tillganglighet_vard_omsorg_files/libs/quarto-html/anchor.min.js"></script>
+<link href="Tillganglighet_vard_omsorg_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="Tillganglighet_vard_omsorg_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="Tillganglighet_vard_omsorg_files/libs/bootstrap/bootstrap.min.js"></script>
+<link href="Tillganglighet_vard_omsorg_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="Tillganglighet_vard_omsorg_files/libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+
+
+<link rel="stylesheet" href="RV_styles.css">
+</head>
+
+<body>
+
+<div id="quarto-content" class="page-columns page-rows-contents page-layout-article toc-left">
+<div id="quarto-sidebar-toc-left" class="sidebar toc-left">
+  <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Innehåll</h2>
+   
+  <ul class="collapse">
+  <li><a href="#inledning" id="toc-inledning" class="nav-link active" data-scroll-target="#inledning">Inledning</a>
+  <ul class="collapse">
+  <li><a href="#metod" id="toc-metod" class="nav-link" data-scroll-target="#metod">Metod</a></li>
+  <li><a href="#sjukhus" id="toc-sjukhus" class="nav-link" data-scroll-target="#sjukhus">Sjukhus</a></li>
+  <li><a href="#vårdcentraler" id="toc-vårdcentraler" class="nav-link" data-scroll-target="#vårdcentraler">Vårdcentraler</a></li>
+  <li><a href="#hemtjänst" id="toc-hemtjänst" class="nav-link" data-scroll-target="#hemtjänst">Hemtjänst</a></li>
+  <li><a href="#särskilda-boenden" id="toc-särskilda-boenden" class="nav-link" data-scroll-target="#särskilda-boenden">Särskilda boenden</a></li>
+  </ul></li>
+  </ul>
+</nav>
+</div>
+<div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+</div>
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title"><div style="height: 140px;">
+
+</div>
+<div style="text-align:center;">
+<img src="RV_logo_primar_RGB.png" style="height:120px; margin-bottom: 1em;">
+<div style="font-weight: bold; font-size: 1.5em;">
+Tillgänglighet till vård och omsorg Västmanland
+</div>
+</div></h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<p><br><br><br> <br><br><br><br> <br><br><br><br><br><br><br><br><br><br><br></p>
+<section id="inledning" class="level1">
+<h1>Inledning</h1>
+<p>Rapporten visar tillgänglighet i form av avstånd och restid till olika vårdinstanser inom och utanför länet. Tillgängligheten kombineras med demografiska data för att visa hur befolkningen är fördelad. Analysen visas i interakativa kartor på olika geografiska nivåer: 1 kilometers-rutor, regionala statistikområden (RegSO) och kommun. Kartorna visar var det är kort respektive långt till olika vård- och omsorgsverksamheter, både i avstånd och i restid samt hur många som bor i områdena. På så sätt går det att se både var tillgängligheten är god respektive sämre och hur det skiljer sig åt mellan olika delar av länet. Underlaget kan ses som stöd i planering och för att få en bild av var det finns behov av att studera tillgängligheten närmare.</p>
+<section id="metod" class="level2">
+<h2 class="anchored" data-anchor-id="metod">Metod</h2>
+<p>Statistiken för rutnivån utgörs av ett rutnät med 1 x 1 kilometers rutor som omfattar de områden där befolkningen bor. Regionala statistikområden (RegSO) är en områdesindelning som SCB har tagit fram för att kunna redovisa statistik för delområden inom kommunerna. Områdena är i genomsnitt större än rutorna och utgår från demografiska statistikområden (DeSO), där flera DeSO slagits ihop till större områden som följer kommungränserna i länet.</p>
+<p>För att skydda sekretess på rutnivå har befolkning med ett färre antal än 3 ersatts med slumpmässiga värden mellan [0-3]. Värdena i de minsta rutorna bör därav läsas som en indikation. Viss filtrering har även gjorts för vissa privata vårdinstanser i länet.</p>
+<p>Avståndet och restiden till vårdinstanser i länet har beräknats med en nätverksanalys (QNEAT3) i programmet QGIS, från mittpunkten i varje 1 x 1 km-ruta, RegSO-område och kommun längs med vägnätet samt utifrån hastighetsgränser och typologi. På RegSO och kommunnivån visas ett genomsnittligt värde för avstånd och restid medan rutnivån visar värdet för varje enskild ruta. Restiden är en uppskattad körtid med bil och tar ej hänsyn till mängden trafik. Från varje geografisk nivå har även avståndet samt restiden beräknats till närmaste vårdinstans och har schablonmässigt stämts av mot stickprov.</p>
+<p>I kartorna går det att växla mellan avstånd, restid, total befolkning och efter kön och ålder. Det går även att zooma, visa helskärmsläge och klicka på en ruta eller ett område för att läsa värdena. Vårdinstanserna visas som punkter i kartorna och kan slås av och på.</p>
+<p><strong>Källor:</strong></p>
+<ul>
+<li><p><em>Befolkningsdatan avser år 2025 och kommer från SCB.</em></p></li>
+<li><p><em>Vägnätsdatan är hämtat från Trafikverkets nationella vägdatabas.</em></p></li>
+<li><p><em>Vårdinstanserna är dels hämtat från interna databaser och dels företagsregistret.</em></p></li>
+</ul>
+<pre><code></code></pre>
+<p><br><br><br></p>
+</section>
+<section id="sjukhus" class="level2">
+<h2 class="anchored" data-anchor-id="sjukhus">Sjukhus</h2>
+<section id="rutnivå" class="level3">
+<h3 class="anchored" data-anchor-id="rutnivå">Rutnivå</h3>
+<div style="position:relative;">
+<button title="Visa i helskärm" onclick="document.getElementById('karta_sjukhus_ruta').requestFullscreen()" style="position:absolute; bottom:8px; left:8px; z-index:10; width:30px; height:30px; padding:0; font-size:18px; line-height:1; cursor:pointer; background:white; border:2px solid rgba(0,0,0,0.3); border-radius:4px;">
+⛶
+</button>
+<iframe id="karta_sjukhus_ruta" src="https://region-vastmanland.github.io/kartor/Tillg%C3%A4nglighet_sjukhus_1kmRutor.html" allowfullscreen="" loading="lazy" width="100%" height="500" style="border:none;">
+</iframe>
+</div>
+<p style="font-size:0.85em; color:#555; margin-top:4px;">
+Kartan visar avstånd och restid till närmaste sjukhus samt befolkning. Växla lager med knapparna uppe till höger.
+</p>
+<p><br></p>
+</section>
+<section id="regso" class="level3">
+<h3 class="anchored" data-anchor-id="regso">RegSO</h3>
+<div style="position:relative;">
+<button title="Visa i helskärm" onclick="document.getElementById('karta_sjukhus_regso').requestFullscreen()" style="position:absolute; bottom:8px; left:8px; z-index:10; width:30px; height:30px; padding:0; font-size:18px; line-height:1; cursor:pointer; background:white; border:2px solid rgba(0,0,0,0.3); border-radius:4px;">
+⛶
+</button>
+<iframe id="karta_sjukhus_regso" src="https://region-vastmanland.github.io/kartor/Tillg%C3%A4nglighet_sjukhus_Regso.html" allowfullscreen="" loading="lazy" width="100%" height="500" style="border:none;">
+</iframe>
+</div>
+<p style="font-size:0.85em; color:#555; margin-top:4px;">
+Kartan visar avstånd och restid till närmaste sjukhus samt befolkning. Växla lager med knapparna uppe till höger. Avståndet och restiden är ett genomsnittligt värde för området.
+</p>
+<p><br></p>
+</section>
+<section id="kommun" class="level3">
+<h3 class="anchored" data-anchor-id="kommun">Kommun</h3>
+<div style="position:relative;">
+<button title="Visa i helskärm" onclick="document.getElementById('karta_sjukhus_kommun').requestFullscreen()" style="position:absolute; bottom:8px; left:8px; z-index:10; width:30px; height:30px; padding:0; font-size:18px; line-height:1; cursor:pointer; background:white; border:2px solid rgba(0,0,0,0.3); border-radius:4px;">
+⛶
+</button>
+<iframe id="karta_sjukhus_kommun" src="https://region-vastmanland.github.io/kartor/Tillg%C3%A4nglighet_sjukhus_Kommun.html" allowfullscreen="" loading="lazy" width="100%" height="500" style="border:none;">
+</iframe>
+</div>
+<p style="font-size:0.85em; color:#555; margin-top:4px;">
+Kartan visar avstånd och restid till närmaste sjukhus samt befolkning. Växla lager med knapparna uppe till höger. Avståndet och restiden är ett genomsnittligt värde för området.
+</p>
+<p><br><br><br><br></p>
+</section>
+</section>
+<section id="vårdcentraler" class="level2">
+<h2 class="anchored" data-anchor-id="vårdcentraler">Vårdcentraler</h2>
+<section id="rutnivå-1" class="level3">
+<h3 class="anchored" data-anchor-id="rutnivå-1">Rutnivå</h3>
+<div style="position:relative;">
+<button title="Visa i helskärm" onclick="document.getElementById('karta_vardcentral_ruta').requestFullscreen()" style="position:absolute; bottom:8px; left:8px; z-index:10; width:30px; height:30px; padding:0; font-size:18px; line-height:1; cursor:pointer; background:white; border:2px solid rgba(0,0,0,0.3); border-radius:4px;">
+⛶
+</button>
+<iframe id="karta_vardcentral_ruta" src="https://region-vastmanland.github.io/kartor/Tillg%C3%A4nglighet_v%C3%A5rdcentral_1kmRutor.html" allowfullscreen="" loading="lazy" width="100%" height="500" style="border:none;">
+</iframe>
+</div>
+<p style="font-size:0.85em; color:#555; margin-top:4px;">
+Kartan visar avstånd och restid till närmaste vårdcentral samt befolkning. Växla lager med knapparna uppe till höger.
+</p>
+<p><br></p>
+</section>
+<section id="regso-1" class="level3">
+<h3 class="anchored" data-anchor-id="regso-1">RegSO</h3>
+<div style="position:relative;">
+<button title="Visa i helskärm" onclick="document.getElementById('karta_vardcentral_regso').requestFullscreen()" style="position:absolute; bottom:8px; left:8px; z-index:10; width:30px; height:30px; padding:0; font-size:18px; line-height:1; cursor:pointer; background:white; border:2px solid rgba(0,0,0,0.3); border-radius:4px;">
+⛶
+</button>
+<iframe id="karta_vardcentral_regso" src="https://region-vastmanland.github.io/kartor/Tillg%C3%A4nglighet_v%C3%A5rdcentral_Regso.html" allowfullscreen="" loading="lazy" width="100%" height="500" style="border:none;">
+</iframe>
+</div>
+<p style="font-size:0.85em; color:#555; margin-top:4px;">
+Kartan visar avstånd och restid till närmaste vårdcentral samt befolkning. Växla lager med knapparna uppe till höger. Avståndet och restiden är ett genomsnittligt värde för området.
+</p>
+<p><br></p>
+</section>
+<section id="kommun-1" class="level3">
+<h3 class="anchored" data-anchor-id="kommun-1">Kommun</h3>
+<div style="position:relative;">
+<button title="Visa i helskärm" onclick="document.getElementById('karta_vardcentral_kommun').requestFullscreen()" style="position:absolute; bottom:8px; left:8px; z-index:10; width:30px; height:30px; padding:0; font-size:18px; line-height:1; cursor:pointer; background:white; border:2px solid rgba(0,0,0,0.3); border-radius:4px;">
+⛶
+</button>
+<iframe id="karta_vardcentral_kommun" src="https://region-vastmanland.github.io/kartor/Tillg%C3%A4nglighet_v%C3%A5rdcentral_Kommun.html" allowfullscreen="" loading="lazy" width="100%" height="500" style="border:none;">
+</iframe>
+</div>
+<p style="font-size:0.85em; color:#555; margin-top:4px;">
+Kartan visar avstånd och restid till närmaste vårdcentral samt befolkning. Växla lager med knapparna uppe till höger. Avståndet och restiden är ett genomsnittligt värde för området.
+</p>
+<p><br><br><br><br></p>
+</section>
+</section>
+<section id="hemtjänst" class="level2">
+<h2 class="anchored" data-anchor-id="hemtjänst">Hemtjänst</h2>
+<section id="rutnivå-2" class="level3">
+<h3 class="anchored" data-anchor-id="rutnivå-2">Rutnivå</h3>
+<div style="position:relative;">
+<button title="Visa i helskärm" onclick="document.getElementById('karta_hemtjanst_ruta').requestFullscreen()" style="position:absolute; bottom:8px; left:8px; z-index:10; width:30px; height:30px; padding:0; font-size:18px; line-height:1; cursor:pointer; background:white; border:2px solid rgba(0,0,0,0.3); border-radius:4px;">
+⛶
+</button>
+<iframe id="karta_hemtjanst_ruta" src="https://region-vastmanland.github.io/kartor/Tillg%C3%A4nglighet_hemtj%C3%A4nst_totalbefolkning_1kmRutor.html" allowfullscreen="" loading="lazy" width="100%" height="500" style="border:none;">
+</iframe>
+</div>
+<p style="font-size:0.85em; color:#555; margin-top:4px;">
+Kartan visar avstånd och restid till närmaste hemtjänst samt befolkning. Växla lager med knapparna uppe till höger.
+</p>
+<p><br></p>
+</section>
+<section id="regso-2" class="level3">
+<h3 class="anchored" data-anchor-id="regso-2">RegSO</h3>
+<div style="position:relative;">
+<button title="Visa i helskärm" onclick="document.getElementById('karta_hemtjanst_regso').requestFullscreen()" style="position:absolute; bottom:8px; left:8px; z-index:10; width:30px; height:30px; padding:0; font-size:18px; line-height:1; cursor:pointer; background:white; border:2px solid rgba(0,0,0,0.3); border-radius:4px;">
+⛶
+</button>
+<iframe id="karta_hemtjanst_regso" src="https://region-vastmanland.github.io/kartor/Tillg%C3%A4nglighet_hemtj%C3%A4nst_Regso.html" allowfullscreen="" loading="lazy" width="100%" height="500" style="border:none;">
+</iframe>
+</div>
+<p style="font-size:0.85em; color:#555; margin-top:4px;">
+Kartan visar avstånd och restid till närmaste hemtjänst samt befolkning. Växla lager med knapparna uppe till höger. Avståndet och restiden är ett genomsnittligt värde för området.
+</p>
+<p><br></p>
+</section>
+<section id="kommun-2" class="level3">
+<h3 class="anchored" data-anchor-id="kommun-2">Kommun</h3>
+<div style="position:relative;">
+<button title="Visa i helskärm" onclick="document.getElementById('karta_hemtjanst_kommun').requestFullscreen()" style="position:absolute; bottom:8px; left:8px; z-index:10; width:30px; height:30px; padding:0; font-size:18px; line-height:1; cursor:pointer; background:white; border:2px solid rgba(0,0,0,0.3); border-radius:4px;">
+⛶
+</button>
+<iframe id="karta_hemtjanst_kommun" src="https://region-vastmanland.github.io/kartor/Tillg%C3%A4nglighet_hemtj%C3%A4nst_Kommun.html" allowfullscreen="" loading="lazy" width="100%" height="500" style="border:none;">
+</iframe>
+</div>
+<p style="font-size:0.85em; color:#555; margin-top:4px;">
+Kartan visar avstånd och restid till närmaste hemtjänst samt befolkning. Växla lager med knapparna uppe till höger. Avståndet och restiden är ett genomsnittligt värde för området.
+</p>
+<p><br><br><br><br></p>
+</section>
+</section>
+<section id="särskilda-boenden" class="level2">
+<h2 class="anchored" data-anchor-id="särskilda-boenden">Särskilda boenden</h2>
+<section id="rutnivå-3" class="level3">
+<h3 class="anchored" data-anchor-id="rutnivå-3">Rutnivå</h3>
+<div style="position:relative;">
+<button title="Visa i helskärm" onclick="document.getElementById('karta_sarskildaboenden_ruta').requestFullscreen()" style="position:absolute; bottom:8px; left:8px; z-index:10; width:30px; height:30px; padding:0; font-size:18px; line-height:1; cursor:pointer; background:white; border:2px solid rgba(0,0,0,0.3); border-radius:4px;">
+⛶
+</button>
+<iframe id="karta_sarskildaboenden_ruta" src="https://region-vastmanland.github.io/kartor/Tillg%C3%A4nglighet_s%C3%A4rskildaboenden_totalbefolkning_1kmRutor.html" allowfullscreen="" loading="lazy" width="100%" height="500" style="border:none;">
+</iframe>
+</div>
+<p style="font-size:0.85em; color:#555; margin-top:4px;">
+Kartan visar avstånd och restid till närmaste särskilda boende samt befolkning. Växla lager med knapparna uppe till höger.
+</p>
+<p><br></p>
+</section>
+<section id="regso-3" class="level3">
+<h3 class="anchored" data-anchor-id="regso-3">RegSO</h3>
+<div style="position:relative;">
+<button title="Visa i helskärm" onclick="document.getElementById('karta_sarskildaboenden_regso').requestFullscreen()" style="position:absolute; bottom:8px; left:8px; z-index:10; width:30px; height:30px; padding:0; font-size:18px; line-height:1; cursor:pointer; background:white; border:2px solid rgba(0,0,0,0.3); border-radius:4px;">
+⛶
+</button>
+<iframe id="karta_sarskildaboenden_regso" src="https://region-vastmanland.github.io/kartor/Tillg%C3%A4nglighet_s%C3%A4rskildaboenden_Regso.html" allowfullscreen="" loading="lazy" width="100%" height="500" style="border:none;">
+</iframe>
+</div>
+<p style="font-size:0.85em; color:#555; margin-top:4px;">
+Kartan visar avstånd och restid till närmaste särskilda boende samt befolkning. Växla lager med knapparna uppe till höger. Avståndet och restiden är ett genomsnittligt värde för området.
+</p>
+<p><br></p>
+</section>
+<section id="kommun-3" class="level3">
+<h3 class="anchored" data-anchor-id="kommun-3">Kommun</h3>
+<div style="position:relative;">
+<button title="Visa i helskärm" onclick="document.getElementById('karta_sarskildaboenden_kommun').requestFullscreen()" style="position:absolute; bottom:8px; left:8px; z-index:10; width:30px; height:30px; padding:0; font-size:18px; line-height:1; cursor:pointer; background:white; border:2px solid rgba(0,0,0,0.3); border-radius:4px;">
+⛶
+</button>
+<iframe id="karta_sarskildaboenden_kommun" src="https://region-vastmanland.github.io/kartor/Tillg%C3%A4nglighet_s%C3%A4rskildaboenden_Kommun.html" allowfullscreen="" loading="lazy" width="100%" height="500" style="border:none;">
+</iframe>
+</div>
+<p style="font-size:0.85em; color:#555; margin-top:4px;">
+Kartan visar avstånd och restid till närmaste särskilda boende samt befolkning. Växla lager med knapparna uppe till höger. Avståndet och restiden är ett genomsnittligt värde för området.
+</p>
+<p><br></p>
+<script>
+// Lägger in kartorna när sidan öppnas
+document.querySelectorAll('.karta').forEach(function(d) {
+  var f = document.createElement('iframe');
+  f.src = d.getAttribute('data-src');
+  f.width = '100%';
+  f.height = '500';
+  f.style.border = 'none';
+  f.loading = 'lazy';
+  d.appendChild(f);
+});
+</script>
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+  // Skapa mobil-TOC endast om skärmen är liten
+  if (window.innerWidth <= 991) {
+    const headings = document.querySelectorAll('h1, h2');
+
+    if (headings.length > 0) {
+      const mobileToc = document.createElement('div');
+      mobileToc.id = 'mobile-toc';
+
+      const title = document.createElement('h3');
+      title.textContent = 'Innehåll';
+      mobileToc.appendChild(title);
+
+      const ul = document.createElement('ul');
+
+      headings.forEach((heading, index) => {
+        if (!heading.id) {
+          heading.id = 'heading-' + index;
+        }
+
+        const li = document.createElement('li');
+        const a = document.createElement('a');
+        a.href = '#' + heading.id;
+        a.textContent = heading.textContent;
+
+        if (heading.tagName === 'H2') {
+          li.classList.add('toc-level-2');
+        }
+
+        li.appendChild(a);
+        ul.appendChild(li);
+      });
+
+      mobileToc.appendChild(ul);
+
+      const mainContent = document.querySelector('#quarto-content') || document.querySelector('main');
+      if (mainContent) {
+        const firstHeading = mainContent.querySelector('h1');
+        if (firstHeading && firstHeading.nextSibling) {
+          firstHeading.parentNode.insertBefore(mobileToc, firstHeading.nextSibling);
+        } else {
+          mainContent.insertBefore(mobileToc, mainContent.firstChild);
+        }
+      }
+    }
+  }
+});
+</script>
+</section>
+</section>
+</section>
+
+</main>
+<!-- /main column -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>
